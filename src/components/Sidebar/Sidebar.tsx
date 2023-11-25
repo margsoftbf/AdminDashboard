@@ -1,4 +1,4 @@
-import { Fragment, useState, ReactNode } from 'react';
+import { Fragment, useState } from 'react';
 import { Dialog, Menu, Transition } from '@headlessui/react';
 import {
 	Bars3Icon,
@@ -26,32 +26,48 @@ import {
 import { RiProfileLine } from 'react-icons/ri';
 import { MdDashboard } from 'react-icons/md';
 import { BsPerson } from 'react-icons/bs';
+import { useLocation, Link } from 'react-router-dom';
 
 const navigation = [
-	{ name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-	{ name: 'Profile', href: '#', icon: RiProfileLine, current: false },
-	{ name: 'Team', href: '#', icon: UsersIcon, current: false },
-	{ name: 'Customers', href: '#', icon: BsPerson, current: false },
-	{ name: 'Products', href: '#', icon: ShoppingCartIcon, current: false },
+	{ name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
+	{ name: 'Profile', href: '/profile', icon: RiProfileLine, current: false },
+	{ name: 'Team', href: '/team', icon: UsersIcon, current: false },
+	{ name: 'Customers', href: '/customers', icon: BsPerson, current: false },
+	{
+		name: 'Products',
+		href: '/products',
+		icon: ShoppingCartIcon,
+		current: false,
+	},
 	{
 		name: 'Orders',
-		href: '#',
+		href: '/orders',
 		icon: ClipboardDocumentCheckIcon,
 		current: false,
 	},
-	{ name: 'Invoices', href: '#', icon: DocumentDuplicateIcon, current: false },
-	{ name: 'Crypto', href: '#', icon: CurrencyDollarIcon, current: false },
-	{ name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-	{ name: 'Kanban', href: '#', icon: DocumentCheckIcon, current: false },
-	{ name: 'Bar Chart', href: '#', icon: ChartBarIcon, current: false },
-	{ name: 'Pie Chart', href: '#', icon: ChartPieIcon, current: false },
+	{
+		name: 'Invoices',
+		href: '/invoices',
+		icon: DocumentDuplicateIcon,
+		current: false,
+	},
+	{ name: 'Crypto', href: '/crypto', icon: CurrencyDollarIcon, current: false },
+	{ name: 'Calendar', href: '/calendar', icon: CalendarIcon, current: false },
+	{ name: 'Kanban', href: '/kanban', icon: DocumentCheckIcon, current: false },
+	{ name: 'Bar Chart', href: '/bar-chart', icon: ChartBarIcon, current: false },
+	{ name: 'Pie Chart', href: '/pie-chart', icon: ChartPieIcon, current: false },
 	{
 		name: 'Line Chart',
-		href: '#',
+		href: '/line-chart',
 		icon: ChartBarSquareIcon,
 		current: false,
 	},
-	{ name: 'FAQ Page', href: '#', icon: QuestionMarkCircleIcon, current: false },
+	{
+		name: 'FAQ Page',
+		href: '/faq',
+		icon: QuestionMarkCircleIcon,
+		current: false,
+	},
 ];
 
 const userNavigation = [
@@ -61,14 +77,15 @@ const userNavigation = [
 
 interface SidebarProps {
 	classes: any[];
-	children: ReactNode;
+	renderRoutes: () => React.ReactNode;
 }
 
 function classNames(...classes: (string | undefined | null | false)[]) {
 	return classes.filter(Boolean).join(' ');
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ children }) => {
+const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
+	const location = useLocation();
 	const [sidebarOpen, setSidebarOpen] = useState(false);
 
 	return (
@@ -138,10 +155,10 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 												<ul role='list' className='-mx-2 space-y-1'>
 													{navigation.map((item) => (
 														<li key={item.name}>
-															<a
-																href={item.href}
+															<Link
+																to={item.href}
 																className={classNames(
-																	item.current
+																	location.pathname === item.href
 																		? 'bg-lightViolet text-white'
 																		: 'text-gray-400 hover:text-white hover:bg-darkViolet',
 																	'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
@@ -152,14 +169,14 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 																	aria-hidden='true'
 																/>
 																{item.name}
-															</a>
+															</Link>
 														</li>
 													))}
 												</ul>
 											</li>
 											<li className='mt-auto'>
-												<a
-													href='#'
+												<Link
+													to='/settings'
 													className='group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-darkViolet hover:text-white'
 												>
 													<Cog6ToothIcon
@@ -167,7 +184,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 														aria-hidden='true'
 													/>
 													Settings
-												</a>
+												</Link>
 											</li>
 										</ul>
 									</nav>
@@ -190,10 +207,10 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 								<ul role='list' className='-mx-2 space-y-1'>
 									{navigation.map((item) => (
 										<li key={item.name}>
-											<a
-												href={item.href}
+											<Link
+												to={item.href}
 												className={classNames(
-													item.current
+													location.pathname === item.href
 														? 'bg-lightViolet text-white'
 														: 'text-gray-400 hover:text-white hover:bg-darkViolet',
 													'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
@@ -204,15 +221,15 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 													aria-hidden='true'
 												/>
 												{item.name}
-											</a>
+											</Link>
 										</li>
 									))}
 								</ul>
 							</li>
 
 							<li className='mt-auto'>
-								<a
-									href='#'
+								<Link
+									to='/settings'
 									className='group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-darkViolet hover:text-white'
 								>
 									<Cog6ToothIcon
@@ -220,7 +237,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 										aria-hidden='true'
 									/>
 									Settings
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</nav>
@@ -341,8 +358,8 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 					</div>
 				</div>
 
-				<main className='py-10'>
-					<div className='px-4 sm:px-6 lg:px-8'>{children}</div>
+				<main className='py-2'>
+					<div className='px-4 sm:px-6 lg:px-8'>{renderRoutes()}</div>
 				</main>
 			</div>
 		</div>
