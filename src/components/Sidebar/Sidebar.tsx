@@ -18,6 +18,8 @@ import {
 	ChartBarIcon,
 	ChartBarSquareIcon,
 	ChatBubbleLeftIcon,
+	ArrowLeftOnRectangleIcon,
+	UserCircleIcon,
 } from '@heroicons/react/24/outline';
 import {
 	ChevronDownIcon,
@@ -27,6 +29,10 @@ import { RiProfileLine } from 'react-icons/ri';
 import { MdDashboard } from 'react-icons/md';
 import { BsPerson } from 'react-icons/bs';
 import { useLocation, Link } from 'react-router-dom';
+import { useAppContext } from '../../context/ContextProvider';
+import Notification from '../Notification';
+import Message from '../Message';
+import Cart from '../Cart';
 
 const navigation = [
 	{ name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
@@ -71,8 +77,8 @@ const navigation = [
 ];
 
 const userNavigation = [
-	{ name: 'Your profile', href: '#' },
-	{ name: 'Sign out', href: '#' },
+	{ name: 'Your profile', href: '/', icon: <UserCircleIcon /> },
+	{ name: 'Sign out', href: '/', icon: <ArrowLeftOnRectangleIcon /> },
 ];
 
 interface SidebarProps {
@@ -87,6 +93,10 @@ function classNames(...classes: (string | undefined | null | false)[]) {
 const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 	const location = useLocation();
 	const [sidebarOpen, setSidebarOpen] = useState(false);
+	const { toggleNotification, toggleMessage, toggleCart } = useAppContext();
+
+	const { isNotificationClicked, isMessageClicked, isCartClicked } =
+		useAppContext();
 
 	return (
 		<div>
@@ -280,26 +290,31 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 						<div className='flex items-center gap-x-4'>
 							<button
 								type='button'
-								className='-m-2.5 p-0.5 lg:p-2.5 text-gray-400 hover:text-gray-500'
+								className='-m-2.5 p-2.5 lg:p-2.5 text-gray-400 hover:text-gray-500'
+								onClick={toggleCart}
 							>
-								<span className='sr-only'>View notifications</span>
+								<span className='sr-only'>Cart</span>
 								<ShoppingCartIcon className='h-6 w-6' aria-hidden='true' />
 							</button>
+							{isCartClicked ? <Cart /> : null}
 							<button
 								type='button'
 								className='-m-2.5 p-2.5 text-gray-400 hover:text-gray-500'
+								onClick={toggleMessage}
 							>
-								<span className='sr-only'>View notifications</span>
+								<span className='sr-only'>Message</span>
 								<ChatBubbleLeftIcon className='h-6 w-6' aria-hidden='true' />
 							</button>
+							{isMessageClicked ? <Message /> : null}
 							<button
 								type='button'
-								className='-m-2.5 p-0.5 lg:p-2.5 text-gray-400 hover:text-gray-500'
+								className='-m-2.5 p-2.5 lg:p-2.5 text-gray-400 hover:text-gray-500'
+								onClick={toggleNotification}
 							>
 								<span className='sr-only'>View notifications</span>
 								<BellIcon className='h-6 w-6' aria-hidden='true' />
 							</button>
-
+							{isNotificationClicked ? <Notification /> : null}
 							<div
 								className='hidden lg:block lg:h-6 lg:w-px lg:bg-gray-900/10'
 								aria-hidden='true'
@@ -339,15 +354,20 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 										{userNavigation.map((item) => (
 											<Menu.Item key={item.name}>
 												{({ active }) => (
-													<a
-														href={item.href}
-														className={classNames(
-															active ? 'bg-gray-50' : '',
-															'block px-3 py-1 text-sm leading-6 text-gray-900'
-														)}
-													>
-														{item.name}
-													</a>
+													<p className='flex items-center px-1'>
+														<span className='text-darkGray text-2xl w-6 h-6 mx-1'>
+															{item.icon}
+														</span>
+														<a
+															href={item.href}
+															className={classNames(
+																active ? 'bg-gray-50' : '',
+																'block px-1 py-1 text-sm leading-6 text-gray-900'
+															)}
+														>
+															{item.name}
+														</a>
+													</p>
 												)}
 											</Menu.Item>
 										))}
