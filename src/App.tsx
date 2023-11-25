@@ -1,8 +1,13 @@
 import './App.css';
+import Sidebar from './components/Sidebar/Sidebar';
+import Essa from './components/Essa/Essa';
 function App() {
 	return (
 		<>
-			<h1>Hello World</h1>
+			<Sidebar classes={[]} >
+
+			<Essa />
+			</Sidebar>
 		</>
 	);
 }

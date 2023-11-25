@@ -6,7 +6,13 @@ export default {
 			fontFamily: {
 				raleway: ['Raleway', 'sans-serif'],
 			},
+			colors: {
+				darkGray: '#1f1e26',
+				lightGray: '#28272e',
+				darkViolet: '#4253d6',
+				lightViolet: '#6270ec',
+			},
 		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/forms')],
 };
