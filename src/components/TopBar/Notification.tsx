@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { personsData } from '../data/data';
+import { personsData } from '../../data/data';
 
 interface SidebarProps {
 	checkedCount: number;

@@ -24,9 +24,9 @@ import { MdDashboard } from 'react-icons/md';
 
 import { useLocation, Link } from 'react-router-dom';
 import { useAppContext } from '../../context/ContextProvider';
-import Notification from '../Notification';
-import Message from '../Message';
-import Cart from '../Cart';
+import Notification from '../TopBar/Notification';
+import Message from '../TopBar/Message';
+import Cart from '../TopBar/Cart';
 import { navigation } from '../../data/data';
 
 const userNavigation = [

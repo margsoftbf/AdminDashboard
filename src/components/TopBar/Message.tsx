@@ -1,4 +1,4 @@
-import { personsData } from '../data/data';
+import { personsData } from '../../data/data';
 
 const Message = () => {
 	return (

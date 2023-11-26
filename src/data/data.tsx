@@ -57,10 +57,78 @@ export const navigation = [
 	},
 ];
 
+interface PersonHome {
+	id: number;
+	avatar: string;
+	name: string;
+	workProfile: string;
+	task: number;
+	trend: boolean;
+	money: number;
+}
+
+export const personsHome: PersonHome[] = [
+	{
+		id: 1,
+		avatar: '../src/assets/img/people/avatar-mark-webber.webp',
+		name: 'Mark Webber',
+		workProfile: 'Sale manager Asia',
+		task: 3,
+		trend: true,
+		money: 2600,
+	},
+	{
+		id: 2,
+		avatar: '../src/assets/img/people/avatar-angela-gray.webp',
+		name: 'Angela Gray',
+		workProfile: 'Sale manager USA',
+		task: 5,
+		trend: true,
+		money: 600,
+	},
+	{
+		id: 3,
+		avatar: '../src/assets/img/people/avatar-jacob-thompson.webp',
+		name: 'Jacob Thompson',
+		workProfile: 'Sale manager Europe',
+		task: 3,
+		trend: false,
+		money: 260,
+	},
+	{
+		id: 4,
+		avatar: './src/assets/img/people/avatar-kimberly-smith.webp',
+		name: 'Kimberly Smith',
+		workProfile: 'Sale manager Australia',
+		task: 4,
+		trend: true,
+		money: 900,
+	},
+	{
+		id: 5,
+		avatar: './src/assets/img/people/avatar-rizky-hasanuddin.webp',
+		name: 'Rizky Hasanuddin',
+		workProfile: 'Sale manager Asia',
+		task: 6,
+		trend: false,
+		money: 800,
+	},
+	{
+		id: 6,
+		avatar: './src/assets/img/people/avatar-nathan-peterson.webp',
+		name: 'Nathan Peterson',
+		workProfile: 'Sale manager USA',
+		task: 2,
+		trend: true,
+		money: 250,
+	},
+];
+
 interface Person {
 	id: number;
 	avatar: string;
 	name: string;
+	workProfile: string;
 	react: string;
 	message: string;
 	checked: boolean;
@@ -71,6 +139,7 @@ export const personsData: Person[] = [
 		id: 1,
 		avatar: '../src/assets/img/people/avatar-mark-webber.webp',
 		name: 'Mark Webber',
+		workProfile: 'Sale manager Asia',
 		react: 'reacted to your recent post',
 		message: 'Sure, can be over there',
 		checked: false,
@@ -79,6 +148,7 @@ export const personsData: Person[] = [
 		id: 2,
 		avatar: '../src/assets/img/people/avatar-angela-gray.webp',
 		name: 'Angela Gray',
+		workProfile: 'Sale manager USA',
 		react: 'followed you',
 		message: 'Ok i will call you',
 		checked: false,
@@ -87,6 +157,7 @@ export const personsData: Person[] = [
 		id: 3,
 		avatar: '../src/assets/img/people/avatar-jacob-thompson.webp',
 		name: 'Jacob Thompson',
+		workProfile: 'Sale manager Europe',
 		react: 'has joined your group',
 		message: 'Congratulate him',
 		checked: false,
@@ -95,6 +166,7 @@ export const personsData: Person[] = [
 		id: 4,
 		avatar: './src/assets/img/people/avatar-kimberly-smith.webp',
 		name: 'Kimberly Smith',
+		workProfile: 'Sale manager Australia',
 		react: 'commented on your picture',
 		message: 'Check your earnings',
 
@@ -104,6 +176,7 @@ export const personsData: Person[] = [
 		id: 5,
 		avatar: './src/assets/img/people/avatar-rizky-hasanuddin.webp',
 		name: 'Rizky Hasanuddin',
+		workProfile: 'Sale manager Asia',
 		react: 'commented on your picture',
 		message: 'Assign her new task',
 		checked: true,
@@ -112,6 +185,7 @@ export const personsData: Person[] = [
 		id: 6,
 		avatar: './src/assets/img/people/avatar-nathan-peterson.webp',
 		name: 'Nathan Peterson',
+		workProfile: 'Sale manager USA',
 		react: 'commented on your picture',
 		message: 'Sure, can be over there',
 		checked: true,
@@ -175,5 +249,116 @@ export const products = [
 		imageSrc:
 			'https://images.unsplash.com/photo-1593032465175-481ac7f401a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3VpdHxlbnwwfHwwfHx8MA%3D%3D',
 		imageAlt: 'Men green suit',
+	},
+];
+
+export const salesData = [
+	{
+		id: 'Sales',
+		color: 'hsl(267.46987951807233, 42.564102564102555%, 61.76470588235294%)',
+		data: [
+			{
+				x: 'Jan',
+				y: 59,
+			},
+			{
+				x: 'Feb',
+				y: 14,
+			},
+			{
+				x: 'Mar',
+				y: 203,
+			},
+			{
+				x: 'Apr',
+				y: 89,
+			},
+			{
+				x: 'May',
+				y: 154,
+			},
+			{
+				x: 'Jun',
+				y: 142,
+			},
+			{
+				x: 'Jul',
+				y: 125,
+			},
+			{
+				x: 'Aug',
+				y: 182,
+			},
+			{
+				x: 'Sep',
+				y: 274,
+			},
+			{
+				x: 'Oct',
+				y: 138,
+			},
+			{
+				x: 'Nov',
+				y: 106,
+			},
+			{
+				x: 'Dec',
+				y: 73,
+			},
+		],
+	},
+	{
+		id: 'Guests',
+		color: '#000',
+		data: [
+			{
+				x: 'Jan',
+				y: 276,
+			},
+			{
+				x: 'Feb',
+				y: 162,
+			},
+			{
+				x: 'Mar',
+				y: 350,
+			},
+			{
+				x: 'Apr',
+				y: 278,
+			},
+			{
+				x: 'May',
+				y: 242,
+			},
+			{
+				x: 'Jun',
+				y: 192,
+			},
+			{
+				x: 'Jul',
+				y: 222,
+			},
+			{
+				x: 'Aug',
+				y: 124,
+			},
+			{
+				x: 'Sep',
+				y: 74,
+			},
+			{
+				x: 'Oct',
+				y: 165,
+			},
+			{
+				x: 'Nov',
+				y: 263,
+			},
+			{
+				x: 'Dec',
+				y: 123,
+			},
+		],
 	},
 ];

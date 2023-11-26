@@ -9,6 +9,7 @@ export default {
 			colors: {
 				darkGray: '#1f1e26',
 				lightGray: '#28272e',
+				lighterGray: '#4e4c57',
 				darkViolet: '#4253d6',
 				lightViolet: '#6270ec',
 			},
