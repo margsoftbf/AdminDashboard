@@ -1,6 +1,8 @@
 const Message = () => {
 	return (
-		<div className='nav-item absolute right-5 md:right-40 top-16 bg-white dark:bg-[#42464D] p-8 rounded-lg w-96'></div>
+		<div className='absolute top-12 right-0 bg-white dark:bg-darkViolet  rounded-lg w-16 px-4'>
+			ss
+		</div>
 	);
 };
 

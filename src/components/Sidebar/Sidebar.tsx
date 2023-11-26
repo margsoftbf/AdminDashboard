@@ -93,7 +93,8 @@ function classNames(...classes: (string | undefined | null | false)[]) {
 const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 	const location = useLocation();
 	const [sidebarOpen, setSidebarOpen] = useState(false);
-	const { toggleNotification, toggleMessage, toggleCart } = useAppContext();
+	const { toggleNotification, toggleMessage, toggleCart, handleCloseAll } =
+		useAppContext();
 
 	const { isNotificationClicked, isMessageClicked, isCartClicked } =
 		useAppContext();
@@ -225,6 +226,7 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 														: 'text-gray-400 hover:text-white hover:bg-darkViolet',
 													'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
 												)}
+												onClick={handleCloseAll}
 											>
 												<item.icon
 													className='h-6 w-6 shrink-0'
@@ -288,40 +290,49 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 							/>
 						</form>
 						<div className='flex items-center gap-x-4'>
-							<button
-								type='button'
-								className='-m-2.5 p-2.5 lg:p-2.5 text-gray-400 hover:text-gray-500'
-								onClick={toggleCart}
-							>
-								<span className='sr-only'>Cart</span>
-								<ShoppingCartIcon className='h-6 w-6' aria-hidden='true' />
-							</button>
-							{isCartClicked ? <Cart /> : null}
-							<button
-								type='button'
-								className='-m-2.5 p-2.5 text-gray-400 hover:text-gray-500'
-								onClick={toggleMessage}
-							>
-								<span className='sr-only'>Message</span>
-								<ChatBubbleLeftIcon className='h-6 w-6' aria-hidden='true' />
-							</button>
-							{isMessageClicked ? <Message /> : null}
-							<button
-								type='button'
-								className='-m-2.5 p-2.5 lg:p-2.5 text-gray-400 hover:text-gray-500'
-								onClick={toggleNotification}
-							>
-								<span className='sr-only'>View notifications</span>
-								<BellIcon className='h-6 w-6' aria-hidden='true' />
-							</button>
-							{isNotificationClicked ? <Notification /> : null}
+							<div className='flex items-center relative'>
+								<button
+									type='button'
+									className='-m-2.5 p-2.5 lg:p-2.5 text-gray-400 hover:text-gray-500'
+									onClick={toggleCart}
+								>
+									<span className='sr-only'>Cart</span>
+									<ShoppingCartIcon className='h-6 w-6' aria-hidden='true' />
+								</button>
+								{isCartClicked ? <Cart /> : null}
+							</div>
+							<div className='flex items-center relative'>
+								<button
+									type='button'
+									className='-m-2.5 p-2.5 text-gray-400 hover:text-gray-500'
+									onClick={toggleMessage}
+								>
+									<span className='sr-only'>Message</span>
+									<ChatBubbleLeftIcon className='h-6 w-6' aria-hidden='true' />
+								</button>
+								{isMessageClicked ? <Message /> : null}
+							</div>
+							<div className='flex items-center relative'>
+								<button
+									type='button'
+									className='-m-2.5 p-2.5 lg:p-2.5 text-gray-400 hover:text-gray-500'
+									onClick={toggleNotification}
+								>
+									<span className='sr-only'>View notifications</span>
+									<BellIcon className='h-6 w-6' aria-hidden='true' />
+								</button>
+								{isNotificationClicked ? <Notification /> : null}
+							</div>
 							<div
-								className='hidden lg:block lg:h-6 lg:w-px lg:bg-gray-900/10'
+								className='hidden lg:block lg:h-6 lg:w-px lg:bg-gray-900/50'
 								aria-hidden='true'
 							/>
 
 							<Menu as='div' className='relative'>
-								<Menu.Button className='-m-1.5 flex items-center p-1.5'>
+								<Menu.Button
+									className='-m-1.5 flex items-center p-1.5'
+									onClick={handleCloseAll}
+								>
 									<span className='sr-only'>Open user menu</span>
 									<img
 										className='h-8 w-8 rounded-full bg-gray-50'
