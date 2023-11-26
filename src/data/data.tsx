@@ -66,7 +66,6 @@ interface Person {
 	checked: boolean;
 }
 
-
 export const personsData: Person[] = [
 	{
 		id: 1,
@@ -116,5 +115,65 @@ export const personsData: Person[] = [
 		react: 'commented on your picture',
 		message: 'Sure, can be over there',
 		checked: true,
+	},
+];
+
+export const products = [
+	{
+		id: 1,
+		name: 'Throwback Hip Bag',
+		href: '#',
+		color: 'Salmon',
+		price: '$90.00',
+		quantity: 1,
+		imageSrc:
+			'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
+		imageAlt:
+			'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
+	},
+	{
+		id: 2,
+		name: 'Medium Stuff Satchel',
+		href: '#',
+		color: 'Blue',
+		price: '$32.00',
+		quantity: 1,
+		imageSrc:
+			'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
+		imageAlt:
+			'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
+	},
+	{
+		id: 3,
+		name: 'Women pants',
+		href: '#',
+		color: 'Pink',
+		price: '$129.00',
+		quantity: 1,
+		imageSrc:
+			'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFudHN8ZW58MHx8MHx8fDA%3D',
+		imageAlt: 'Women pink pants',
+	},
+	{
+		id: 4,
+		name: 'Women tshirt',
+		href: '#',
+		color: 'Gray',
+		price: '$158.00',
+		quantity: 2,
+		imageSrc:
+			'https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+		imageAlt: 'Women tshirt gray',
+	},
+	{
+		id: 5,
+		name: 'Men suit',
+		href: '#',
+		color: 'Green',
+		price: '$499.00',
+		quantity: 1,
+		imageSrc:
+			'https://images.unsplash.com/photo-1593032465175-481ac7f401a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3VpdHxlbnwwfHwwfHx8MA%3D%3D',
+		imageAlt: 'Men green suit',
 	},
 ];
