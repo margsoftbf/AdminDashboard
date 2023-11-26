@@ -3,20 +3,9 @@ import { Dialog, Menu, Transition } from '@headlessui/react';
 import {
 	Bars3Icon,
 	BellIcon,
-	CalendarIcon,
-	ChartPieIcon,
 	Cog6ToothIcon,
-	DocumentDuplicateIcon,
-	HomeIcon,
-	UsersIcon,
 	XMarkIcon,
 	ShoppingCartIcon,
-	ClipboardDocumentCheckIcon,
-	CurrencyDollarIcon,
-	DocumentCheckIcon,
-	QuestionMarkCircleIcon,
-	ChartBarIcon,
-	ChartBarSquareIcon,
 	ChatBubbleLeftIcon,
 	ArrowLeftOnRectangleIcon,
 	UserCircleIcon,
@@ -25,56 +14,15 @@ import {
 	ChevronDownIcon,
 	MagnifyingGlassIcon,
 } from '@heroicons/react/20/solid';
-import { RiProfileLine } from 'react-icons/ri';
+
 import { MdDashboard } from 'react-icons/md';
-import { BsPerson } from 'react-icons/bs';
+
 import { useLocation, Link } from 'react-router-dom';
 import { useAppContext } from '../../context/ContextProvider';
 import Notification from '../Notification';
 import Message from '../Message';
 import Cart from '../Cart';
-
-const navigation = [
-	{ name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
-	{ name: 'Profile', href: '/profile', icon: RiProfileLine, current: false },
-	{ name: 'Team', href: '/team', icon: UsersIcon, current: false },
-	{ name: 'Customers', href: '/customers', icon: BsPerson, current: false },
-	{
-		name: 'Products',
-		href: '/products',
-		icon: ShoppingCartIcon,
-		current: false,
-	},
-	{
-		name: 'Orders',
-		href: '/orders',
-		icon: ClipboardDocumentCheckIcon,
-		current: false,
-	},
-	{
-		name: 'Invoices',
-		href: '/invoices',
-		icon: DocumentDuplicateIcon,
-		current: false,
-	},
-	{ name: 'Crypto', href: '/crypto', icon: CurrencyDollarIcon, current: false },
-	{ name: 'Calendar', href: '/calendar', icon: CalendarIcon, current: false },
-	{ name: 'Kanban', href: '/kanban', icon: DocumentCheckIcon, current: false },
-	{ name: 'Bar Chart', href: '/bar-chart', icon: ChartBarIcon, current: false },
-	{ name: 'Pie Chart', href: '/pie-chart', icon: ChartPieIcon, current: false },
-	{
-		name: 'Line Chart',
-		href: '/line-chart',
-		icon: ChartBarSquareIcon,
-		current: false,
-	},
-	{
-		name: 'FAQ Page',
-		href: '/faq',
-		icon: QuestionMarkCircleIcon,
-		current: false,
-	},
-];
+import { navigation } from '../../data/data';
 
 const userNavigation = [
 	{ name: 'Your profile', href: '/', icon: <UserCircleIcon /> },

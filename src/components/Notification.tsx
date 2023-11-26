@@ -46,7 +46,7 @@ const Notification: React.FC<SidebarProps> = ({
 			{persons.map((person) => (
 				<div
 					key={person.id}
-					className={`pointer-events-auto text-xs flex w-full max-w-md rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 my-2 relative ${
+					className={`pointer-events-auto text-xs flex w-full max-w-md rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 my-2 relative cursor-pointer hover:bg-stone-100 ${
 						person.checked ? 'bg-white' : 'bg-red-100'
 					}`}
 				>
