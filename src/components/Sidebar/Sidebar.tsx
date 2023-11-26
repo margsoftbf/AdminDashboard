@@ -93,12 +93,14 @@ function classNames(...classes: (string | undefined | null | false)[]) {
 const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 	const location = useLocation();
 	const [sidebarOpen, setSidebarOpen] = useState(false);
+
+	const [checkedCount, setCheckedCount] = useState(0);
+	const [unread, setUnread] = useState(false);
 	const { toggleNotification, toggleMessage, toggleCart, handleCloseAll } =
 		useAppContext();
 
 	const { isNotificationClicked, isMessageClicked, isCartClicked } =
 		useAppContext();
-
 	return (
 		<div>
 			<Transition.Root show={sidebarOpen} as={Fragment}>
@@ -313,6 +315,9 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 								{isMessageClicked ? <Message /> : null}
 							</div>
 							<div className='flex items-center relative'>
+								{unread ? null : (
+									<span className='absolute inline-block w-2 h-2 rounded-full bg-red-400 -right-[1px] top-0'></span>
+								)}
 								<button
 									type='button'
 									className='-m-2.5 p-2.5 lg:p-2.5 text-gray-400 hover:text-gray-500'
@@ -321,7 +326,13 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 									<span className='sr-only'>View notifications</span>
 									<BellIcon className='h-6 w-6' aria-hidden='true' />
 								</button>
-								{isNotificationClicked ? <Notification /> : null}
+								{isNotificationClicked ? (
+									<Notification
+										checkedCount={checkedCount}
+										setCheckedCount={setCheckedCount}
+										setUnread={setUnread}
+									/>
+								) : null}
 							</div>
 							<div
 								className='hidden lg:block lg:h-6 lg:w-px lg:bg-gray-900/50'

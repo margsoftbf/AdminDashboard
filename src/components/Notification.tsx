@@ -1,8 +1,18 @@
 import { useEffect, useState } from 'react';
 import { personsData } from '../data/data';
-const Notification = () => {
+
+interface SidebarProps {
+	checkedCount: number;
+	setCheckedCount: React.Dispatch<React.SetStateAction<number>>;
+	setUnread: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Notification: React.FC<SidebarProps> = ({
+	checkedCount,
+	setCheckedCount,
+	setUnread,
+}) => {
 	const [persons, setPersons] = useState(personsData);
-	const [checkedCount, setCheckedCount] = useState(0);
 
 	useEffect(() => {
 		const countChecked = persons.reduce(
@@ -19,6 +29,7 @@ const Notification = () => {
 			checked: true,
 		}));
 		setPersons(updatePersons);
+		setUnread(true);
 	};
 
 	return (
@@ -26,7 +37,7 @@ const Notification = () => {
 			<div className='flex justify-between text-[14px] font-semibold mt-2 mb-4'>
 				<p className='flex items-center justify-center'>
 					Notification
-					<span className=' bg-[#0a327b] text-white rounded-xl m-1 px-2 py-1'>
+					<span className=' bg-darkViolet text-white rounded-md m-1 px-2 py-1'>
 						{checkedCount}
 					</span>
 				</p>
