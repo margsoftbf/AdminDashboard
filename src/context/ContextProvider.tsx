@@ -18,7 +18,7 @@ interface AppProviderProps {
 
 export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
 	const [isNotificationClicked, setNotificationClicked] = useState(false);
-	const [isMessageClicked, setMessageClicked] = useState(true);
+	const [isMessageClicked, setMessageClicked] = useState(false);
 	const [isCartClicked, setCartClicked] = useState(false);
 
 	const toggleNotification = () => {

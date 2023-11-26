@@ -33,7 +33,7 @@ const Notification: React.FC<SidebarProps> = ({
 	};
 
 	return (
-		<div className='absolute top-12 right-0 w-[280px] md:w-[330px] bg-white text-black rounded-md  px-4'>
+		<div className='absolute top-12 right-0 w-[280px] md:w-[330px] bg-white text-black rounded-md px-4'>
 			<div className='flex justify-between text-[14px] font-semibold mt-2 mb-4'>
 				<p className='flex items-center justify-center'>
 					Notification

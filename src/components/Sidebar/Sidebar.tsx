@@ -9,6 +9,11 @@ import {
 	ChatBubbleLeftIcon,
 	ArrowLeftOnRectangleIcon,
 	UserCircleIcon,
+	EnvelopeIcon,
+	DocumentCheckIcon,
+	LifebuoyIcon,
+	BanknotesIcon,
+	Cog8ToothIcon,
 } from '@heroicons/react/24/outline';
 import {
 	ChevronDownIcon,
@@ -25,7 +30,12 @@ import Cart from '../Cart';
 import { navigation } from '../../data/data';
 
 const userNavigation = [
-	{ name: 'Your profile', href: '/', icon: <UserCircleIcon /> },
+	{ name: 'Profile', href: '/', icon: <UserCircleIcon /> },
+	{ name: 'Message', href: '/', icon: <EnvelopeIcon /> },
+	{ name: 'Taskboard', href: '/', icon: <DocumentCheckIcon /> },
+	{ name: 'Help', href: '/', icon: <LifebuoyIcon /> },
+	{ name: 'Balance', href: '/', icon: <BanknotesIcon /> },
+	{ name: 'Settings', href: '/', icon: <Cog8ToothIcon /> },
 	{ name: 'Sign out', href: '/', icon: <ArrowLeftOnRectangleIcon /> },
 ];
 
@@ -49,6 +59,7 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 
 	const { isNotificationClicked, isMessageClicked, isCartClicked } =
 		useAppContext();
+
 	return (
 		<div>
 			<Transition.Root show={sidebarOpen} as={Fragment}>
@@ -274,6 +285,7 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 									<span className='sr-only'>View notifications</span>
 									<BellIcon className='h-6 w-6' aria-hidden='true' />
 								</button>
+
 								{isNotificationClicked ? (
 									<Notification
 										checkedCount={checkedCount}
@@ -320,24 +332,30 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 									leaveFrom='transform opacity-100 scale-100'
 									leaveTo='transform opacity-0 scale-95'
 								>
-									<Menu.Items className='absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none'>
+									<Menu.Items
+										className={`absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none`}
+									>
 										{userNavigation.map((item) => (
 											<Menu.Item key={item.name}>
 												{({ active }) => (
-													<p className='flex items-center px-1'>
-														<span className='text-darkGray text-2xl w-6 h-6 mx-1'>
-															{item.icon}
-														</span>
-														<a
-															href={item.href}
-															className={classNames(
-																active ? 'bg-gray-50' : '',
-																'block px-1 py-1 text-sm leading-6 text-gray-900'
-															)}
+													<div className='relative'>
+														<p
+															className={`flex items-center before:content-[''] before:absolute before:h-[1px] before:w-[90%] before:bg-stone-400 before:bottom-0 before:left-1/2 before:transform before:-translate-x-1/2 mb-1`}
 														>
-															{item.name}
-														</a>
-													</p>
+															<span className='text-stone-400 w-6 h-6 mx-1'>
+																{item.icon}
+															</span>
+															<a
+																href={item.href}
+																className={classNames(
+																	active ? 'bg-gray-100 rounded-md' : '',
+																	'block px-1 py-1 text-sm leading-6 text-gray-900'
+																)}
+															>
+																{item.name}
+															</a>
+														</p>
+													</div>
 												)}
 											</Menu.Item>
 										))}
