@@ -19,7 +19,7 @@ const HomeInvoices = () => {
 			<h2 className='font-semibold mt-2 text-xl text-yellow-200'>Invoices</h2>
 			<ul
 				role='list'
-				className='grid grid-cols-1 gap-x-6 gap-y-8 xl:gap-x-8 px-4 mt-4'
+				className='grid grid-cols-1 gap-x-6 gap-y-4 xl:gap-x-8 px-4 mt-4'
 			>
 				{clients.map((client) => (
 					<li key={client.id} className='overflow-hidden'>
@@ -79,15 +79,15 @@ const HomeInvoices = () => {
 						</div>
 						<dl className='-my-3 px-1 py-1 text-sm leading-6 '>
 							<div className='flex justify-between gap-x-4 py-1'>
-								<dt className='text-gray-400 '>Last invoice</dt>
-								<dd className='text-gray-400 '>
+								<dt className='text-gray-400 text-xs'>Last invoice</dt>
+								<dd className='text-gray-400 text-xs'>
 									<time dateTime={client.lastInvoice.dateTime}>
 										{client.lastInvoice.date}
 									</time>
 								</dd>
 							</div>
 							<div className='flex justify-between gap-x-4 py-1'>
-								<dt className='text-gray-400 '>Amount</dt>
+								<dt className='text-gray-400 text-xs'>Amount</dt>
 								<dd className='flex items-start gap-x-2'>
 									<div className='font-medium text-white'>
 										{client.lastInvoice.amount}
