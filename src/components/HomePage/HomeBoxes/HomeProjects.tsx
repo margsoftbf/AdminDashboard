@@ -15,7 +15,7 @@ function classNames(...classes: string[]) {
 
 const HomeProjects = () => {
 	return (
-		<div className='bg-lightGray rounded-md max-h-[520px]'>
+		<div className='bg-lightGray rounded-md max-h-[530px] overflow-y-auto overflow-hidden'>
 			<h2 className='font-semibold mt-2 text-xl text-yellow-200'>Projects</h2>
 			<ul role='list' className='divide-y divide-gray-100 px-2'>
 				{projects.map((project) => (
@@ -49,12 +49,6 @@ const HomeProjects = () => {
 							</div>
 						</div>
 						<div className='flex flex-none items-center gap-x-4'>
-							<a
-								href={project.href}
-								className='hidden rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 lg:block'
-							>
-								View project<span className='sr-only'>, {project.name}</span>
-							</a>
 							<Menu as='div' className='relative flex-none'>
 								<Menu.Button className='-m-2.5 block p-2.5 text-gray-500 hover:text-white'>
 									<span className='sr-only'>Open options</span>

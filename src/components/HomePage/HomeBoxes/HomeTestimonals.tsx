@@ -1,7 +1,7 @@
 import { personsData } from '../../../data/data';
 const HomeTestimonals = () => {
 	return (
-		<div className='bg-lightGray rounded-md max-h-[520px] overflow-auto'>
+		<div className='bg-lightGray rounded-md max-h-[530px] overflow-y-auto'>
 			<h2 className='font-semibold mt-2 text-xl text-yellow-200'>
 				Testimonals
 			</h2>

@@ -15,23 +15,23 @@ function classNames(...classes: string[]): string {
 
 const HomeInvoices = () => {
 	return (
-		<div className='bg-lightGray rounded-md max-h-[520px] overflow-auto'>
+		<div className='bg-lightGray rounded-md max-h-[530px] overflow-auto'>
 			<h2 className='font-semibold mt-2 text-xl text-yellow-200'>Invoices</h2>
 			<ul
 				role='list'
 				className='grid grid-cols-1 gap-x-6 gap-y-4 xl:gap-x-8 px-4 mt-4'
 			>
 				{clients.map((client) => (
-					<li key={client.id} className='overflow-hidden'>
+					<li key={client.id} className='overflow-hidden my-2'>
 						<div
 							className={`flex items-center gap-x-4 border-b border-gray-900/5  py-1 relative  before:content-[''] before:absolute before:h-[1px] before:w-full before:bg-gray-500 before:bottom-2`}
 						>
 							<div className='text-sm font-bold leading-8 text-white relative'>
 								{client.name}
 							</div>
-							<Menu as='div' className='relative ml-auto'>
-								<Menu.Button className='-m-2.5 block p-2.5 text-gray-400 hover:text-gray-500'>
-									<span className='sr-only'>Open options</span>
+							<Menu as='div' className='relative ml-auto z-50'>
+								<Menu.Button className='-m-2.5 block p-2.5 text-gray-400 hover:text-gray-500 z-50'>
+									<span className='sr-only z-50'>Open options</span>
 									<EllipsisHorizontalIcon
 										className='h-5 w-5'
 										aria-hidden='true'
@@ -46,7 +46,7 @@ const HomeInvoices = () => {
 									leaveFrom='transform opacity-100 scale-100'
 									leaveTo='transform opacity-0 scale-95'
 								>
-									<Menu.Items className='absolute right-0 z-10 mt-0.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none'>
+									<Menu.Items className='absolute right-0 z-10 mt-0.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none z-50'>
 										<Menu.Item>
 											{({ active }) => (
 												<a
