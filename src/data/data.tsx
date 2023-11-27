@@ -129,9 +129,14 @@ interface Person {
 	avatar: string;
 	name: string;
 	workProfile: string;
+	email: string;
+	role: string;
 	react: string;
 	message: string;
 	checked: boolean;
+	lastSeen: string | null | undefined;
+	lastSeenDateTime: string | null | undefined;
+	content: string;
 }
 
 export const personsData: Person[] = [
@@ -140,55 +145,90 @@ export const personsData: Person[] = [
 		avatar: '../src/assets/img/people/avatar-mark-webber.webp',
 		name: 'Mark Webber',
 		workProfile: 'Sale manager Asia',
+		email: 'leslie.alexander@example.com',
+		role: 'Co-Founder / CEO',
 		react: 'reacted to your recent post',
 		message: 'Sure, can be over there',
 		checked: false,
+		lastSeen: '3h ago',
+		lastSeenDateTime: '2023-01-23T13:23Z',
+		content:
+			'Explicabo nihil laborum. Saepe facilis consequuntur in eaque. Consequatur perspiciatis quam. Sed est illo quia. Culpa vitae placeat vitae. Repudiandae sunt exercitationem nihil nisi facilis placeat minima eveniet.',
 	},
 	{
 		id: 2,
 		avatar: '../src/assets/img/people/avatar-angela-gray.webp',
 		name: 'Angela Gray',
 		workProfile: 'Sale manager USA',
+		email: 'michael.foster@example.com',
+		role: 'Co-Founder / CTO',
 		react: 'followed you',
 		message: 'Ok i will call you',
 		checked: false,
+		lastSeen: null,
+		lastSeenDateTime: null,
+		content:
+			'Laudantium quidem non et saepe vel sequi accusamus consequatur et. Saepe inventore veniam incidunt cumque et laborum nemo blanditiis rerum. A unde et molestiae autem ad. Architecto dolor ex accusantium maxime cumque laudantium itaque aut perferendis.',
 	},
 	{
 		id: 3,
 		avatar: '../src/assets/img/people/avatar-jacob-thompson.webp',
 		name: 'Jacob Thompson',
 		workProfile: 'Sale manager Europe',
+		email: 'dries.vincent@example.com',
+		role: 'Business Relations',
 		react: 'has joined your group',
 		message: 'Congratulate him',
 		checked: false,
+		lastSeen: '5h ago',
+		lastSeenDateTime: '2023-01-23T13:23Z',
+		content:
+			'Quia animi harum in quis quidem sint. Ipsum dolorem molestias veritatis quis eveniet commodi assumenda temporibus. Dicta ut modi alias nisi. Veniam quia velit et ut. Id quas ducimus reprehenderit veniam fugit amet fugiat ipsum eius. Voluptas nobis earum in in vel corporis nisi.',
 	},
 	{
 		id: 4,
 		avatar: './src/assets/img/people/avatar-kimberly-smith.webp',
 		name: 'Kimberly Smith',
 		workProfile: 'Sale manager Australia',
+		email: 'lindsay.walton@example.com',
+		role: 'Front-end Developer',
 		react: 'commented on your picture',
 		message: 'Check your earnings',
-
 		checked: true,
+		lastSeen: '3h ago',
+		lastSeenDateTime: '2023-01-23T13:23Z',
+		content:
+			'Unde dolore exercitationem nobis reprehenderit rerum corporis accusamus. Nemo suscipit temporibus quidem dolorum. Nobis optio quae atque blanditiis aspernatur doloribus sit accusamus. Sunt reiciendis ut corrupti ab debitis dolorem dolorem nam sit. Ducimus nisi qui earum aliquam. Est nam doloribus culpa illum.',
 	},
 	{
 		id: 5,
 		avatar: './src/assets/img/people/avatar-rizky-hasanuddin.webp',
 		name: 'Rizky Hasanuddin',
 		workProfile: 'Sale manager Asia',
+		email: 'courtney.henry@example.com',
+		role: 'Designer',
 		react: 'commented on your picture',
 		message: 'Assign her new task',
 		checked: true,
+		lastSeen: '3h ago',
+		lastSeenDateTime: '2023-01-23T13:23Z',
+		content:
+			'Quia animi harum in quis quidem sint. Ipsum dolorem molestias veritatis quis eveniet commodi assumenda temporibus. Dicta ut modi alias nisi. Veniam quia velit et ut. Id quas ducimus reprehenderit veniam fugit amet fugiat ipsum eius. Voluptas nobis earum in in vel corporis nisi.',
 	},
 	{
 		id: 6,
 		avatar: './src/assets/img/people/avatar-nathan-peterson.webp',
 		name: 'Nathan Peterson',
 		workProfile: 'Sale manager USA',
+		email: 'tom.cook@example.com',
+		role: 'Director of Product',
 		react: 'commented on your picture',
 		message: 'Sure, can be over there',
 		checked: true,
+		lastSeen: null,
+		lastSeenDateTime: null,
+		content:
+			'Unde dolore exercitationem nobis reprehenderit rerum corporis accusamus. Nemo suscipit temporibus quidem dolorum. Nobis optio quae atque blanditiis aspernatur doloribus sit accusamus. Sunt reiciendis ut corrupti ab debitis dolorem dolorem nam sit. Ducimus nisi qui earum aliquam. Est nam doloribus culpa illum.',
 	},
 ];
 
@@ -360,5 +400,138 @@ export const salesData = [
 				y: 123,
 			},
 		],
+	},
+];
+
+export const circleData = [
+	{
+		id: 'Guest',
+		label: 'Guest',
+		value: 222,
+		color: 'hsl(211, 70%, 50%)',
+	},
+	{
+		id: 'Customer',
+		label: 'Customer',
+		value: 276,
+		color: 'hsl(11, 70%, 50%)',
+	},
+	{
+		id: 'Workers',
+		label: 'Workers',
+		value: 323,
+		color: 'hsl(111, 70%, 50%)',
+	},
+	{
+		id: 'CEO',
+		label: 'CEO',
+		value: 325,
+		color: 'hsl(307, 70%, 50%)',
+	},
+	{
+		id: 'President',
+		label: 'President',
+		value: 405,
+		color: 'hsl(349, 70%, 50%)',
+	},
+];
+
+export const projects = [
+	{
+		id: 1,
+		name: 'GraphQL API',
+		href: '#',
+		status: 'Complete',
+		createdBy: 'Leslie Alexander',
+		dueDate: 'March 17, 2023',
+		dueDateTime: '2023-03-17T00:00Z',
+	},
+	{
+		id: 2,
+		name: 'New benefits plan',
+		href: '#',
+		status: 'In progress',
+		createdBy: 'Leslie Alexander',
+		dueDate: 'May 5, 2023',
+		dueDateTime: '2023-05-05T00:00Z',
+	},
+	{
+		id: 3,
+		name: 'Onboarding emails',
+		href: '#',
+		status: 'Archived',
+		createdBy: 'Courtney Henry',
+		dueDate: 'May 25, 2023',
+		dueDateTime: '2023-05-25T00:00Z',
+	},
+	{
+		id: 4,
+		name: 'iOS app',
+		href: '#',
+		status: 'In progress',
+		createdBy: 'Leonard Krasner',
+		dueDate: 'June 7, 2023',
+		dueDateTime: '2023-06-07T00:00Z',
+	},
+	{
+		id: 5,
+		name: 'Marketing site redesign',
+		href: '#',
+		status: 'Archived',
+		createdBy: 'Courtney Henry',
+		dueDate: 'June 10, 2023',
+		dueDateTime: '2023-06-10T00:00Z',
+	},
+	{
+		id: 6,
+		name: 'Team number 3',
+		href: '#',
+		status: 'Complete',
+		createdBy: 'Mike Gulasowski',
+		dueDate: 'June 10, 2023',
+		dueDateTime: '2023-06-10T00:00Z',
+	},
+];
+
+export const clients = [
+	{
+		id: 1,
+		name: 'Tuple',
+		lastInvoice: {
+			date: 'December 13, 2022',
+			dateTime: '2022-12-13',
+			amount: '$2,000.00',
+			status: 'Overdue',
+		},
+	},
+	{
+		id: 2,
+		name: 'SavvyCal',
+		lastInvoice: {
+			date: 'January 22, 2023',
+			dateTime: '2023-01-22',
+			amount: '$14,000.00',
+			status: 'Paid',
+		},
+	},
+	{
+		id: 3,
+		name: 'Reform',
+		lastInvoice: {
+			date: 'January 23, 2023',
+			dateTime: '2023-01-23',
+			amount: '$7,600.00',
+			status: 'Paid',
+		},
+	},
+	{
+		id: 3,
+		name: 'Nokia',
+		lastInvoice: {
+			date: 'January 23, 2023',
+			dateTime: '2023-01-23',
+			amount: '$7,600.00',
+			status: 'Withdraw',
+		},
 	},
 ];

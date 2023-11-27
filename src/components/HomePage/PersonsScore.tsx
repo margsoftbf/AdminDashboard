@@ -29,7 +29,8 @@ const PersonsScore = () => {
 								</p>
 								<div className='w-full rounded-full h-2.5 bg-lighterGray'>
 									<div
-										className={`bg-green-600 h-2.5 rounded-full w-${person.task}/6`}
+										className={`bg-green-600 h-2.5 rounded-full w-full`}
+										style={{ width: `${Math.floor((person.task / 6) * 100)}%` }}
 									></div>
 								</div>
 							</div>
