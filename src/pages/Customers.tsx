@@ -1,8 +1,9 @@
 
-const Customers = () => {
-  return (
-    <div>Customers</div>
-  )
-}
 
-export default Customers
+const Customers = () => {
+	return (
+		<div>Customers</div>
+	);
+};
+
+export default Customers;

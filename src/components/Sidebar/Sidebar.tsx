@@ -135,6 +135,7 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 																		: 'text-gray-400 hover:text-white hover:bg-darkViolet',
 																	'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
 																)}
+																onClick={() => setSidebarOpen(false)}
 															>
 																<item.icon
 																	className='h-6 w-6 shrink-0'

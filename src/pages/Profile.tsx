@@ -1,8 +1,14 @@
+import { motion } from 'framer-motion';
+
 const Profile = () => {
 	return (
-		<div>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
+		>
 			<main>
-				<div className='divide-y divide-white/5 grid grid-cols-1 xl:grid-cols-2'>
+				<div className='divide-y divide-white/5 grid grid-cols-1 xl:grid-cols-2 mt-8'>
 					<div className='grid max-w-7xl grid-cols-1 gap-x-8 gap-y-10 px-4 py-4 sm:px-6 md:grid-cols-3 lg:px-8'>
 						<div>
 							<h2 className='text-base font-semibold leading-7 text-white'>
@@ -283,7 +289,7 @@ const Profile = () => {
 					</div>
 				</div>
 			</main>
-		</div>
+		</motion.div>
 	);
 };
 
