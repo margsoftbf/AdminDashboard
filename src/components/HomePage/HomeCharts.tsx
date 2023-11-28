@@ -1,10 +1,15 @@
 import { ResponsiveLine } from '@nivo/line';
 import { ResponsivePie } from '@nivo/pie';
 import { salesData, circleData } from '../../data/data';
-
+import { motion } from 'framer-motion';
 const HomeCharts = () => {
 	return (
-		<div className='flex flex-col lg:flex-row items-center gap-4'>
+		<motion.div
+			className='flex flex-col lg:flex-row items-center gap-4'
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
+		>
 			<div className='w-full h-96 lg:w-2/3 bg-lightGray rounded-md'>
 				<h2 className='text-left ml-2 mt-2 font-semibold'>Line Chart</h2>
 				<ResponsiveLine
@@ -215,7 +220,7 @@ const HomeCharts = () => {
 					legends={[]}
 				/>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

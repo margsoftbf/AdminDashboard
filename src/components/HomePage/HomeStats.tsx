@@ -1,5 +1,5 @@
 import { ArrowDownIcon, ArrowUpIcon } from '@heroicons/react/20/solid';
-
+import { motion } from 'framer-motion';
 const stats = [
 	{
 		id: 1,
@@ -57,7 +57,11 @@ function classNames(...classes: string[]) {
 
 const HomeStats = () => {
 	return (
-		<div>
+		<motion.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
+		>
 			<dl className='mt-5 grid gap-5 overflow-hidden rounded-lg shadow grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6'>
 				{stats.map((item) => (
 					<div
@@ -106,7 +110,7 @@ const HomeStats = () => {
 					</div>
 				))}
 			</dl>
-		</div>
+		</motion.div>
 	);
 };
 

@@ -4,9 +4,15 @@ import {
 } from '@heroicons/react/24/outline';
 
 import { personsHome as persons } from '../../data/data';
+import { motion } from 'framer-motion';
 const PersonsScore = () => {
 	return (
-		<div className='border-b border-b-gray-900/10 lg:border-t lg:border-t-gray-900/5 my-2'>
+		<motion.div
+			className='border-b border-b-gray-900/10 lg:border-t lg:border-t-gray-900/5 my-2'
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
+		>
 			<div className='mx-auto grid max-w-10xl gap-4 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 lg:px-2 xl:px-0'>
 				{persons.map((person) => (
 					<div
@@ -56,7 +62,7 @@ const PersonsScore = () => {
 					</div>
 				))}
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

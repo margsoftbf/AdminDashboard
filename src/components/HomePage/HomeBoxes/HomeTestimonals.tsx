@@ -18,7 +18,7 @@ const HomeTestimonals = () => {
 								<p className='text-sm font-semibold leading-6 text-white'>
 									{person.name}
 								</p>
-								<p className='flex-none text-xs text-gray-400'>
+								<p className='flex-none text-xs text-gray-300'>
 									{person.lastSeenDateTime && (
 										<time dateTime={person.lastSeenDateTime}>
 											{person.lastSeen}
@@ -26,7 +26,7 @@ const HomeTestimonals = () => {
 									)}
 								</p>
 							</div>
-							<p className='mt-1 line-clamp-2 text-xs leading-6 text-gray-500 text-left'>
+							<p className='mt-1 line-clamp-2 text-xs leading-6 text-gray-400 text-left'>
 								{person.content}
 							</p>
 						</div>
