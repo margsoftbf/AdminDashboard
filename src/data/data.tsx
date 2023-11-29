@@ -550,6 +550,8 @@ export const userRows = [
 		earnings: '2532',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Shoes, Jacket',
+		status: 'Completed',
 	},
 	{
 		id: 2,
@@ -564,6 +566,8 @@ export const userRows = [
 		earnings: '-250',
 		actions: 'edit, delete',
 		verified: false,
+		item: 'Shoes',
+		status: 'Pending',
 	},
 	{
 		id: 3,
@@ -578,6 +582,8 @@ export const userRows = [
 		earnings: '756',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Hoodie, Shirt',
+		status: 'Completed',
 	},
 	{
 		id: 4,
@@ -592,6 +598,8 @@ export const userRows = [
 		earnings: '980',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Shoes, Jacket',
+		status: 'Cancel',
 	},
 	{
 		id: 5,
@@ -606,6 +614,8 @@ export const userRows = [
 		earnings: '-120',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Jeans, Slippers',
+		status: 'Completed',
 	},
 	{
 		id: 6,
@@ -620,6 +630,8 @@ export const userRows = [
 		earnings: '3500',
 		actions: 'edit, delete',
 		verified: false,
+		item: 'Shoes, Jacket',
+		status: 'Pending',
 	},
 	{
 		id: 7,
@@ -634,6 +646,8 @@ export const userRows = [
 		earnings: '1973',
 		actions: 'edit, delete',
 		verified: false,
+		item: 'Hoodie, Shirt',
+		status: 'Cancel',
 	},
 	{
 		id: 8,
@@ -648,6 +662,8 @@ export const userRows = [
 		earnings: '-840',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Jeans, Slippers',
+		status: 'Completed',
 	},
 	{
 		id: 9,
@@ -662,6 +678,8 @@ export const userRows = [
 		earnings: '1735',
 		actions: 'edit, delete',
 		verified: false,
+		item: 'Hoodie, Shirt',
+		status: 'Cancel',
 	},
 	{
 		id: 10,
@@ -676,6 +694,8 @@ export const userRows = [
 		earnings: '-501',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Shoes, Jacket',
+		status: 'Pending',
 	},
 	{
 		id: 11,
@@ -690,6 +710,8 @@ export const userRows = [
 		earnings: '780',
 		actions: 'edit, delete',
 		verified: false,
+		item: 'Hoodie, Shirt',
+		status: 'Completed',
 	},
 	{
 		id: 12,
@@ -704,6 +726,8 @@ export const userRows = [
 		earnings: '804',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Jeans, Slippers',
+		status: 'Cancel',
 	},
 	{
 		id: 13,
@@ -718,6 +742,8 @@ export const userRows = [
 		earnings: '555',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Shoes, Jacket',
+		status: 'Pending',
 	},
 	{
 		id: 14,
@@ -732,6 +758,8 @@ export const userRows = [
 		earnings: '632',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Hoodie, Shirt',
+		status: 'Completed',
 	},
 	{
 		id: 15,
@@ -746,6 +774,8 @@ export const userRows = [
 		earnings: '752',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Jeans, Slippers',
+		status: 'Cancel',
 	},
 	{
 		id: 16,
@@ -760,6 +790,8 @@ export const userRows = [
 		earnings: '-640',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Jeans, Slippers',
+		status: 'Pending',
 	},
 	{
 		id: 17,
@@ -774,6 +806,8 @@ export const userRows = [
 		earnings: '125',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Jeans, Slippers',
+		status: 'Completed',
 	},
 	{
 		id: 18,
@@ -788,6 +822,8 @@ export const userRows = [
 		earnings: '2532',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Shoes, Jacket',
+		status: 'Cancel',
 	},
 	{
 		id: 19,
@@ -802,6 +838,8 @@ export const userRows = [
 		earnings: '-250',
 		actions: 'edit, delete',
 		verified: false,
+		item: 'Hoodie, Shirt',
+		status: 'Completed',
 	},
 	{
 		id: 20,
@@ -816,6 +854,8 @@ export const userRows = [
 		earnings: '756',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Hoodie, Shirt',
+		status: 'Pending',
 	},
 	{
 		id: 21,
@@ -830,6 +870,8 @@ export const userRows = [
 		earnings: '980',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Shoes, Jacket',
+		status: 'Completed',
 	},
 	{
 		id: 22,
@@ -844,6 +886,8 @@ export const userRows = [
 		earnings: '-120',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Hoodie, Shirt',
+		status: 'Cancel',
 	},
 	{
 		id: 23,
@@ -858,6 +902,8 @@ export const userRows = [
 		earnings: '3500',
 		actions: 'edit, delete',
 		verified: false,
+		item: 'Jeans, Slippers',
+		status: 'Pending',
 	},
 	{
 		id: 24,
@@ -872,6 +918,8 @@ export const userRows = [
 		earnings: '1973',
 		actions: 'edit, delete',
 		verified: false,
+		item: 'Hoodie, Shirt',
+		status: 'Completed',
 	},
 	{
 		id: 25,
@@ -886,6 +934,8 @@ export const userRows = [
 		earnings: '-840',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Shoes, Jacket',
+		status: 'Cancel',
 	},
 	{
 		id: 26,
@@ -900,6 +950,8 @@ export const userRows = [
 		earnings: '1735',
 		actions: 'edit, delete',
 		verified: false,
+		item: 'Hoodie, Shirt',
+		status: 'Completed',
 	},
 	{
 		id: 27,
@@ -914,6 +966,8 @@ export const userRows = [
 		earnings: '-501',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Jeans, Slippers',
+		status: 'Pending',
 	},
 	{
 		id: 28,
@@ -928,6 +982,8 @@ export const userRows = [
 		earnings: '780',
 		actions: 'edit, delete',
 		verified: false,
+		item: 'Hoodie, Shirt',
+		status: 'Cancel',
 	},
 	{
 		id: 29,
@@ -942,6 +998,8 @@ export const userRows = [
 		earnings: '804',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Shoes, Jacket',
+		status: 'Completed',
 	},
 	{
 		id: 30,
@@ -956,6 +1014,8 @@ export const userRows = [
 		earnings: '555',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Jeans, Slippers',
+		status: 'Pending',
 	},
 	{
 		id: 31,
@@ -970,6 +1030,8 @@ export const userRows = [
 		earnings: '632',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Hoodie, Shirt',
+		status: 'Cancel',
 	},
 	{
 		id: 32,
@@ -984,6 +1046,8 @@ export const userRows = [
 		earnings: '752',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Jeans, Slippers',
+		status: 'Completed',
 	},
 	{
 		id: 33,
@@ -998,6 +1062,8 @@ export const userRows = [
 		earnings: '-640',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Hoodie, Shirt',
+		status: 'Pending',
 	},
 	{
 		id: 34,
@@ -1012,5 +1078,7 @@ export const userRows = [
 		earnings: '125',
 		actions: 'edit, delete',
 		verified: true,
+		item: 'Shoes, Jacket',
+		status: 'Completed',
 	},
 ];
