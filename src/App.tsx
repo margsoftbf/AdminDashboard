@@ -17,7 +17,6 @@ import Products from './pages/Products';
 import Settings from './pages/Settings';
 import Team from './pages/Team';
 
-
 function App() {
 	return (
 		<Router>
