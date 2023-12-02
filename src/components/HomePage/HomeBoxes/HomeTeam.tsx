@@ -2,7 +2,7 @@ import { personsData } from '../../../data/data';
 const HomeTeam = () => {
 	return (
 		<div className='bg-lightGray rounded-md max-h-[530px] overflow-auto'>
-			<h2 className='font-semibold mt-2 text-xl text-yellow-200'>Team</h2>
+			<h2 className='font-semibold mt-2 text-xl text-white'>Team</h2>
 			<ul role='list' className='divide-y bg-lightGray px-2'>
 				{personsData.map((person) => (
 					<li

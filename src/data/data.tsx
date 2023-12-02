@@ -70,7 +70,7 @@ interface PersonHome {
 export const personsHome: PersonHome[] = [
 	{
 		id: 1,
-		avatar: '../src/assets/img/people/avatar-mark-webber.webp',
+		avatar: '/assets/img/people/avatar-mark-webber.webp',
 		name: 'Mark Webber',
 		workProfile: 'Sale manager Asia',
 		task: 3,
@@ -79,7 +79,7 @@ export const personsHome: PersonHome[] = [
 	},
 	{
 		id: 2,
-		avatar: '../src/assets/img/people/avatar-angela-gray.webp',
+		avatar: '/assets/img/people/avatar-angela-gray.webp',
 		name: 'Angela Gray',
 		workProfile: 'Sale manager USA',
 		task: 5,
@@ -88,7 +88,7 @@ export const personsHome: PersonHome[] = [
 	},
 	{
 		id: 3,
-		avatar: '../src/assets/img/people/avatar-jacob-thompson.webp',
+		avatar: '/assets/img/people/avatar-jacob-thompson.webp',
 		name: 'Jacob Thompson',
 		workProfile: 'Sale manager Europe',
 		task: 3,
@@ -97,7 +97,7 @@ export const personsHome: PersonHome[] = [
 	},
 	{
 		id: 4,
-		avatar: './src/assets/img/people/avatar-kimberly-smith.webp',
+		avatar: '/assets/img/people/avatar-kimberly-smith.webp',
 		name: 'Kimberly Smith',
 		workProfile: 'Sale manager Australia',
 		task: 4,
@@ -106,7 +106,7 @@ export const personsHome: PersonHome[] = [
 	},
 	{
 		id: 5,
-		avatar: './src/assets/img/people/avatar-rizky-hasanuddin.webp',
+		avatar: '/assets/img/people/avatar-rizky-hasanuddin.webp',
 		name: 'Rizky Hasanuddin',
 		workProfile: 'Sale manager Asia',
 		task: 6,
@@ -115,7 +115,7 @@ export const personsHome: PersonHome[] = [
 	},
 	{
 		id: 6,
-		avatar: './src/assets/img/people/avatar-nathan-peterson.webp',
+		avatar: '/assets/img/people/avatar-nathan-peterson.webp',
 		name: 'Nathan Peterson',
 		workProfile: 'Sale manager USA',
 		task: 2,
@@ -142,7 +142,7 @@ interface Person {
 export const personsData: Person[] = [
 	{
 		id: 1,
-		avatar: '../src/assets/img/people/avatar-mark-webber.webp',
+		avatar: '/assets/img/people/avatar-mark-webber.webp',
 		name: 'Mark Webber',
 		workProfile: 'Sale manager Asia',
 		email: 'leslie.alexander@example.com',
@@ -157,7 +157,7 @@ export const personsData: Person[] = [
 	},
 	{
 		id: 2,
-		avatar: '../src/assets/img/people/avatar-angela-gray.webp',
+		avatar: '/assets/img/people/avatar-angela-gray.webp',
 		name: 'Angela Gray',
 		workProfile: 'Sale manager USA',
 		email: 'michael.foster@example.com',
@@ -172,7 +172,7 @@ export const personsData: Person[] = [
 	},
 	{
 		id: 3,
-		avatar: '../src/assets/img/people/avatar-jacob-thompson.webp',
+		avatar: '/assets/img/people/avatar-jacob-thompson.webp',
 		name: 'Jacob Thompson',
 		workProfile: 'Sale manager Europe',
 		email: 'dries.vincent@example.com',
@@ -187,7 +187,7 @@ export const personsData: Person[] = [
 	},
 	{
 		id: 4,
-		avatar: './src/assets/img/people/avatar-kimberly-smith.webp',
+		avatar: '/assets/img/people/avatar-kimberly-smith.webp',
 		name: 'Kimberly Smith',
 		workProfile: 'Sale manager Australia',
 		email: 'lindsay.walton@example.com',
@@ -202,7 +202,7 @@ export const personsData: Person[] = [
 	},
 	{
 		id: 5,
-		avatar: './src/assets/img/people/avatar-rizky-hasanuddin.webp',
+		avatar: '/assets/img/people/avatar-rizky-hasanuddin.webp',
 		name: 'Rizky Hasanuddin',
 		workProfile: 'Sale manager Asia',
 		email: 'courtney.henry@example.com',
@@ -217,7 +217,7 @@ export const personsData: Person[] = [
 	},
 	{
 		id: 6,
-		avatar: './src/assets/img/people/avatar-nathan-peterson.webp',
+		avatar: '/assets/img/people/avatar-nathan-peterson.webp',
 		name: 'Nathan Peterson',
 		workProfile: 'Sale manager USA',
 		email: 'tom.cook@example.com',
@@ -539,7 +539,7 @@ export const clients = [
 export const userRows = [
 	{
 		id: 1,
-		img: './src/assets/img/people/avatar-nathan-peterson.webp',
+		img: '/assets/img/people/avatar-nathan-peterson.webp',
 		firstName: 'Eula',
 		lastName: 'Hubbard',
 		email: 'kewez@@gmail.com',
@@ -555,7 +555,7 @@ export const userRows = [
 	},
 	{
 		id: 2,
-		img: '../src/assets/img/people/avatar-mark-webber.webp',
+		img: '/assets/img/people/avatar-mark-webber.webp',
 		firstName: 'James',
 		lastName: 'Smith',
 		email: 'jsmith@gmail.com',
@@ -571,7 +571,7 @@ export const userRows = [
 	},
 	{
 		id: 3,
-		img: '../src/assets/img/people/avatar-angela-gray.webp',
+		img: '/assets/img/people/avatar-angela-gray.webp',
 		firstName: 'Christopher',
 		lastName: 'Anderson',
 		email: 'canderson@gmail.com',
@@ -587,7 +587,7 @@ export const userRows = [
 	},
 	{
 		id: 4,
-		img: './src/assets/img/people/avatar-kimberly-smith.webp',
+		img: '/assets/img/people/avatar-kimberly-smith.webp',
 		firstName: 'Mary',
 		lastName: 'Wright',
 		email: 'mwright@gmail.com',
@@ -603,7 +603,7 @@ export const userRows = [
 	},
 	{
 		id: 5,
-		img: './src/assets/img/people/avatar-nathan-peterson.webp',
+		img: '/assets/img/people/avatar-nathan-peterson.webp',
 		firstName: 'Lisa',
 		lastName: 'Mitchell',
 		email: 'lmitchell@gmail.com',
@@ -619,7 +619,7 @@ export const userRows = [
 	},
 	{
 		id: 6,
-		img: '../src/assets/img/people/avatar-mark-webber.webp',
+		img: '/assets/img/people/avatar-mark-webber.webp',
 		firstName: 'Jonh',
 		lastName: 'Thomas',
 		email: 'jthomas@gmail.com',
@@ -635,7 +635,7 @@ export const userRows = [
 	},
 	{
 		id: 7,
-		img: './src/assets/img/people/avatar-rizky-hasanuddin.webp',
+		img: '/assets/img/people/avatar-rizky-hasanuddin.webp',
 		firstName: 'Daniel',
 		lastName: 'Rodriguez',
 		email: 'drodriguez@gmail.com',
@@ -651,7 +651,7 @@ export const userRows = [
 	},
 	{
 		id: 8,
-		img: '../src/assets/img/people/avatar-angela-gray.webp',
+		img: '/assets/img/people/avatar-angela-gray.webp',
 		firstName: 'Anthony',
 		lastName: 'Lopez',
 		email: 'alopez@gmail.com',
@@ -667,7 +667,7 @@ export const userRows = [
 	},
 	{
 		id: 9,
-		img: './src/assets/img/people/avatar-kimberly-smith.webp',
+		img: '/assets/img/people/avatar-kimberly-smith.webp',
 		firstName: 'Patricia',
 		lastName: 'Perez',
 		email: 'pperez@gmail.com',
@@ -683,7 +683,7 @@ export const userRows = [
 	},
 	{
 		id: 10,
-		img: './src/assets/img/people/avatar-rizky-hasanuddin.webp',
+		img: '/assets/img/people/avatar-rizky-hasanuddin.webp',
 		firstName: 'Nancy',
 		lastName: 'Williams',
 		email: 'nwilliams@gmail.com',
@@ -699,7 +699,7 @@ export const userRows = [
 	},
 	{
 		id: 11,
-		img: '../src/assets/img/people/avatar-mark-webber.webp',
+		img: '/assets/img/people/avatar-mark-webber.webp',
 		firstName: 'Laura',
 		lastName: 'Jackson',
 		email: 'ljackson@gmail.com',
@@ -715,7 +715,7 @@ export const userRows = [
 	},
 	{
 		id: 12,
-		img: './src/assets/img/people/avatar-nathan-peterson.webp',
+		img: '/assets/img/people/avatar-nathan-peterson.webp',
 		firstName: 'Robert',
 		lastName: 'Lewis',
 		email: 'rlewis@gmail.com',
@@ -731,7 +731,7 @@ export const userRows = [
 	},
 	{
 		id: 13,
-		img: '../src/assets/img/people/avatar-angela-gray.webp',
+		img: '/assets/img/people/avatar-angela-gray.webp',
 		firstName: 'Paul',
 		lastName: 'Hill',
 		email: 'phill@gmail.com',
@@ -747,7 +747,7 @@ export const userRows = [
 	},
 	{
 		id: 14,
-		img: './src/assets/img/people/avatar-kimberly-smith.webp',
+		img: '/assets/img/people/avatar-kimberly-smith.webp',
 		firstName: 'Kevin',
 		lastName: 'Roberts',
 		email: 'kroberts@gmail.com',
@@ -763,7 +763,7 @@ export const userRows = [
 	},
 	{
 		id: 15,
-		img: './src/assets/img/people/avatar-rizky-hasanuddin.webp',
+		img: '/assets/img/people/avatar-rizky-hasanuddin.webp',
 		firstName: 'Linda',
 		lastName: 'Jones',
 		email: 'ljones@gmail.com',
@@ -779,7 +779,7 @@ export const userRows = [
 	},
 	{
 		id: 16,
-		img: './src/assets/img/people/avatar-rizky-hasanuddin.webp',
+		img: '/assets/img/people/avatar-rizky-hasanuddin.webp',
 		firstName: 'Karen',
 		lastName: 'White',
 		email: 'kwhite@gmail.com',
@@ -795,7 +795,7 @@ export const userRows = [
 	},
 	{
 		id: 17,
-		img: './src/assets/img/people/avatar-nathan-peterson.webp',
+		img: '/assets/img/people/avatar-nathan-peterson.webp',
 		firstName: 'Sarah',
 		lastName: 'Lee',
 		email: 'slee@gmail.com',
@@ -811,7 +811,7 @@ export const userRows = [
 	},
 	{
 		id: 18,
-		img: './src/assets/img/people/avatar-nathan-peterson.webp',
+		img: '/assets/img/people/avatar-nathan-peterson.webp',
 		firstName: 'Eula',
 		lastName: 'Hubbard',
 		email: 'kewez@@gmail.com',
@@ -827,7 +827,7 @@ export const userRows = [
 	},
 	{
 		id: 19,
-		img: '../src/assets/img/people/avatar-mark-webber.webp',
+		img: '/assets/img/people/avatar-mark-webber.webp',
 		firstName: 'James',
 		lastName: 'Smith',
 		email: 'jsmith@gmail.com',
@@ -843,7 +843,7 @@ export const userRows = [
 	},
 	{
 		id: 20,
-		img: '../src/assets/img/people/avatar-angela-gray.webp',
+		img: '/assets/img/people/avatar-angela-gray.webp',
 		firstName: 'Christopher',
 		lastName: 'Anderson',
 		email: 'canderson@gmail.com',
@@ -859,7 +859,7 @@ export const userRows = [
 	},
 	{
 		id: 21,
-		img: './src/assets/img/people/avatar-kimberly-smith.webp',
+		img: '/assets/img/people/avatar-kimberly-smith.webp',
 		firstName: 'Mary',
 		lastName: 'Wright',
 		email: 'mwright@gmail.com',
@@ -875,7 +875,7 @@ export const userRows = [
 	},
 	{
 		id: 22,
-		img: './src/assets/img/people/avatar-nathan-peterson.webp',
+		img: '/assets/img/people/avatar-nathan-peterson.webp',
 		firstName: 'Lisa',
 		lastName: 'Mitchell',
 		email: 'lmitchell@gmail.com',
@@ -891,7 +891,7 @@ export const userRows = [
 	},
 	{
 		id: 23,
-		img: '../src/assets/img/people/avatar-mark-webber.webp',
+		img: '/assets/img/people/avatar-mark-webber.webp',
 		firstName: 'Jonh',
 		lastName: 'Thomas',
 		email: 'jthomas@gmail.com',
@@ -907,7 +907,7 @@ export const userRows = [
 	},
 	{
 		id: 24,
-		img: './src/assets/img/people/avatar-rizky-hasanuddin.webp',
+		img: '/assets/img/people/avatar-rizky-hasanuddin.webp',
 		firstName: 'Daniel',
 		lastName: 'Rodriguez',
 		email: 'drodriguez@gmail.com',
@@ -923,7 +923,7 @@ export const userRows = [
 	},
 	{
 		id: 25,
-		img: '../src/assets/img/people/avatar-angela-gray.webp',
+		img: '/assets/img/people/avatar-angela-gray.webp',
 		firstName: 'Anthony',
 		lastName: 'Lopez',
 		email: 'alopez@gmail.com',
@@ -939,7 +939,7 @@ export const userRows = [
 	},
 	{
 		id: 26,
-		img: './src/assets/img/people/avatar-kimberly-smith.webp',
+		img: '/assets/img/people/avatar-kimberly-smith.webp',
 		firstName: 'Patricia',
 		lastName: 'Perez',
 		email: 'pperez@gmail.com',
@@ -955,7 +955,7 @@ export const userRows = [
 	},
 	{
 		id: 27,
-		img: './src/assets/img/people/avatar-rizky-hasanuddin.webp',
+		img: '/assets/img/people/avatar-rizky-hasanuddin.webp',
 		firstName: 'Nancy',
 		lastName: 'Williams',
 		email: 'nwilliams@gmail.com',
@@ -971,7 +971,7 @@ export const userRows = [
 	},
 	{
 		id: 28,
-		img: '../src/assets/img/people/avatar-mark-webber.webp',
+		img: '/assets/img/people/avatar-mark-webber.webp',
 		firstName: 'Laura',
 		lastName: 'Jackson',
 		email: 'ljackson@gmail.com',
@@ -987,7 +987,7 @@ export const userRows = [
 	},
 	{
 		id: 29,
-		img: './src/assets/img/people/avatar-nathan-peterson.webp',
+		img: '/assets/img/people/avatar-nathan-peterson.webp',
 		firstName: 'Robert',
 		lastName: 'Lewis',
 		email: 'rlewis@gmail.com',
@@ -1003,7 +1003,7 @@ export const userRows = [
 	},
 	{
 		id: 30,
-		img: '../src/assets/img/people/avatar-angela-gray.webp',
+		img: '/assets/img/people/avatar-angela-gray.webp',
 		firstName: 'Paul',
 		lastName: 'Hill',
 		email: 'phill@gmail.com',
@@ -1019,7 +1019,7 @@ export const userRows = [
 	},
 	{
 		id: 31,
-		img: './src/assets/img/people/avatar-kimberly-smith.webp',
+		img: '/assets/img/people/avatar-kimberly-smith.webp',
 		firstName: 'Kevin',
 		lastName: 'Roberts',
 		email: 'kroberts@gmail.com',
@@ -1035,7 +1035,7 @@ export const userRows = [
 	},
 	{
 		id: 32,
-		img: './src/assets/img/people/avatar-rizky-hasanuddin.webp',
+		img: '/assets/img/people/avatar-rizky-hasanuddin.webp',
 		firstName: 'Linda',
 		lastName: 'Jones',
 		email: 'ljones@gmail.com',
@@ -1051,7 +1051,7 @@ export const userRows = [
 	},
 	{
 		id: 33,
-		img: './src/assets/img/people/avatar-rizky-hasanuddin.webp',
+		img: '/assets/img/people/avatar-rizky-hasanuddin.webp',
 		firstName: 'Karen',
 		lastName: 'White',
 		email: 'kwhite@gmail.com',
@@ -1067,7 +1067,7 @@ export const userRows = [
 	},
 	{
 		id: 34,
-		img: './src/assets/img/people/avatar-nathan-peterson.webp',
+		img: '/assets/img/people/avatar-nathan-peterson.webp',
 		firstName: 'Sarah',
 		lastName: 'Lee',
 		email: 'slee@gmail.com',

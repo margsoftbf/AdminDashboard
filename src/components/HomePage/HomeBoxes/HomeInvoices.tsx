@@ -16,7 +16,7 @@ function classNames(...classes: string[]): string {
 const HomeInvoices = () => {
 	return (
 		<div className='bg-lightGray rounded-md max-h-[530px] overflow-auto'>
-			<h2 className='font-semibold mt-2 text-xl text-yellow-200'>Invoices</h2>
+			<h2 className='font-semibold mt-2 text-xl text-white'>Invoices</h2>
 			<ul
 				role='list'
 				className='grid grid-cols-1 gap-x-6 gap-y-4 xl:gap-x-8 px-4 mt-4'

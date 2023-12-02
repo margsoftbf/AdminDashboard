@@ -16,7 +16,7 @@ function classNames(...classes: string[]) {
 const HomeProjects = () => {
 	return (
 		<div className='bg-lightGray rounded-md max-h-[530px] overflow-y-auto overflow-hidden'>
-			<h2 className='font-semibold mt-2 text-xl text-yellow-200'>Projects</h2>
+			<h2 className='font-semibold mt-2 text-xl text-white'>Projects</h2>
 			<ul role='list' className='divide-y divide-gray-100 px-2'>
 				{projects.map((project) => (
 					<li

@@ -5,6 +5,7 @@ import { esbuildCommonjs } from '@originjs/vite-plugin-commonjs'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './AdminDashboard/',
   plugins: [react()],
   optimizeDeps:{
     esbuildOptions:{
