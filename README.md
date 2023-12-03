@@ -1,21 +1,3 @@
-# Admin Dashboard - React, Typescript
-
-Admin Dashboard app, where you can check crypto market, your profile, team, customers and orders. Look for products, generate invoices, check the calendar, work with kanban and check the few kind of chart.
-
-## Live preview
-
-https://margsoftbf.github.io/Multitask-App/
-
-## Screenshoot
-
-![App Screenshoot](https://github.com/margsoftbf/AdminDashboard/blob/main/public/assets/Screenshot.png)
-
-## Download and Installation
-
-```bash
-  git clone https://github.com/margsoftbf/Multitask-App.git
-```
-
 # Admin Dashboard
 
 Welcome to my dashboard application, a comprehensive solution designed to streamline your day-to-day activities and provide valuable insights across various domains. This versatile application offers a rich set of features to enhance your productivity and decision-making processes.
@@ -26,7 +8,7 @@ https://admin-garski-dashboard.netlify.app/
 
 ## Screenshoot
 
-![App Screenshoot](https://raw.githubusercontent.com/margsoftbf/Multitask-App/main/public/screenshot/MultitaskApp-BMICalculator.jpg)
+![App Screenshoot](https://github.com/margsoftbf/AdminDashboard/blob/main/public/assets/Screenshot.png)
 
 ## Download and Installation
 
