@@ -13,8 +13,132 @@ interface CryptoProps {
 	current_price: number;
 	price_change_percentage_24h: number;
 	market_cap: number;
+	market_cap_rank: number;
 	ath: number;
 }
+
+const coinsArray = [
+	{
+		id: 1,
+		market_cap_rank: 1,
+		name: 'Bitcoin',
+		image:
+			'https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579',
+		symbol: 'btc',
+		current_price: 50000,
+		price_change_percentage_24h: 2.5,
+		market_cap: 1000000000,
+		ath: 60000,
+	},
+	{
+		id: 2,
+		market_cap_rank: 2,
+		name: 'Ethereum',
+		image:
+			'https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880',
+		symbol: 'eth',
+		current_price: 3000,
+		price_change_percentage_24h: -1.8,
+		market_cap: 350000000,
+		ath: 4000,
+	},
+	{
+		id: 3,
+		market_cap_rank: 3,
+		name: 'Cardano',
+		image:
+			'https://assets.coingecko.com/coins/images/975/large/cardano.png?1547034860',
+		symbol: 'ada',
+		current_price: 2.5,
+		price_change_percentage_24h: 5.2,
+		market_cap: 80000000,
+		ath: 3.0,
+	},
+	{
+		id: 4,
+		market_cap_rank: 4,
+		name: 'Binance Coin',
+		image:
+			'https://assets.coingecko.com/coins/images/825/standard/bnb-icon2_2x.png?1696501970',
+		symbol: 'bnb',
+		current_price: 350,
+		price_change_percentage_24h: 0.9,
+		market_cap: 55000000,
+		ath: 380,
+	},
+	{
+		id: 5,
+		market_cap_rank: 5,
+		name: 'Solana',
+		image:
+			'https://assets.coingecko.com/coins/images/4128/large/solana.png?1548384250',
+		symbol: 'sol',
+		current_price: 150,
+		price_change_percentage_24h: -3.5,
+		market_cap: 20000000,
+		ath: 180,
+	},
+	{
+		id: 6,
+		market_cap_rank: 6,
+		name: 'XRP',
+		image:
+			'https://assets.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png?1605778731',
+		symbol: 'xrp',
+		current_price: 1.2,
+		price_change_percentage_24h: 1.0,
+		market_cap: 30000000,
+		ath: 1.5,
+	},
+	{
+		id: 7,
+		market_cap_rank: 7,
+		name: 'Polkadot',
+		image:
+			'https://assets.coingecko.com/coins/images/12171/large/aJGBjJFU_400x400.jpg?1597804776',
+		symbol: 'dot',
+		current_price: 30,
+		price_change_percentage_24h: -2.0,
+		market_cap: 4000000,
+		ath: 35,
+	},
+	{
+		id: 8,
+		market_cap_rank: 8,
+		name: 'Dogecoin',
+		image:
+			'https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256',
+		symbol: 'doge',
+		current_price: 0.3,
+		price_change_percentage_24h: 2.8,
+		market_cap: 2000000,
+		ath: 0.35,
+	},
+	{
+		id: 9,
+		market_cap_rank: 9,
+		name: 'Litecoin',
+		image:
+			'https://assets.coingecko.com/coins/images/2/large/litecoin.png?1547033580',
+		symbol: 'ltc',
+		current_price: 150,
+		price_change_percentage_24h: -1.0,
+		market_cap: 12000000,
+		ath: 170,
+	},
+	{
+		id: 10,
+		market_cap_rank: 10,
+		name: 'Chainlink',
+		image:
+			'https://assets.coingecko.com/coins/images/877/large/chainlink-new-logo.png?1547034700',
+		symbol: 'link',
+		current_price: 25,
+		price_change_percentage_24h: 4.5,
+		market_cap: 5000000,
+		ath: 28,
+	},
+];
 
 const Crypto = () => {
 	const [coins, setCoins] = useState<CryptoProps[]>([]);
@@ -24,20 +148,35 @@ const Crypto = () => {
 		setSearch(e.target.value);
 	};
 
+	useEffect(() => {
+		const getCoins = async () => {
+			try {
+				const res = await fetch(
+					'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false'
+				);
+				const data = await res.json();
+
+				if (Array.isArray(data)) {
+					setCoins(data);
+				} else {
+					setCoins(coinsArray);
+					console.error(
+						'Invalid data format received from the API. Using fallback data.'
+					);
+				}
+			} catch (error) {
+				setCoins(coinsArray);
+				console.error('Failed to fetch coins, using fallback data.', error);
+			}
+		};
+		getCoins();
+		const intervalId = setInterval(getCoins, 60000);
+		return () => clearInterval(intervalId);
+	}, [coinsArray]);
+
 	const filterCoins = coins.filter((coin) =>
 		coin.name.toLowerCase().includes(search.toLowerCase())
 	);
-
-	useEffect(() => {
-		const getCoins = async () => {
-			const res = await fetch(
-				'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false'
-			);
-			const data = await res.json();
-			setCoins(data);
-		};
-		getCoins();
-	}, []);
 
 	return (
 		<motion.div
@@ -117,7 +256,7 @@ const Crypto = () => {
 						<tr key={coin.id}>
 							<td className='py-4 pl-4 pr-8 sm:pl-6 lg:pl-8'>
 								<div className='flex items-center font-mono text-sm leading-6 text-gray-400 justify-end md:justify-start'>
-									{coin.id}
+									{coin.market_cap_rank}
 								</div>
 							</td>
 							<td className='py-4 pl-4 pr-8 sm:pl-6 lg:pl-8'>

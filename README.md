@@ -42,7 +42,7 @@ https://admin-garski-dashboard.netlify.app/
    Generate and manage invoices effortlessly, maintaining a streamlined financial record.
 
 8. Crypto
-   Stay updated on cryptocurrency trends and market fluctuations.
+   Stay updated on cryptocurrency trends and market fluctuations. If crypto API doesn't wanna load, pushed static 10 coins to table.
 
 9. Calendar
    Plan and organize your schedule, never miss an important event or deadline.

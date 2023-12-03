@@ -9,7 +9,7 @@ const HomeTestimonals = () => {
 						<img
 							className='h-12 w-12 flex-none rounded-full bg-gray-50'
 							src={person.avatar}
-							alt=''
+							alt={person.avatarAlt}
 						/>
 						<div className='flex-auto'>
 							<div className='flex items-baseline justify-between gap-x-4'>

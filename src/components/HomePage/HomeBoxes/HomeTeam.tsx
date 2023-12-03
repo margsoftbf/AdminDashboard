@@ -13,7 +13,7 @@ const HomeTeam = () => {
 							<img
 								className='h-12 w-12 flex-none rounded-full bg-gray-800'
 								src={person.avatar}
-								alt=''
+								alt={person.avatarAlt}
 							/>
 							<div className='min-w-0 flex-auto'>
 								<p className='text-sm font-semibold leading-6 text-white'>

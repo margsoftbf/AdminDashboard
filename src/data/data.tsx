@@ -60,6 +60,7 @@ export const navigation = [
 interface PersonHome {
 	id: number;
 	avatar: string;
+	avatarAlt: string;
 	name: string;
 	workProfile: string;
 	task: number;
@@ -71,6 +72,7 @@ export const personsHome: PersonHome[] = [
 	{
 		id: 1,
 		avatar: '/assets/img/people/avatar-mark-webber.webp',
+		avatarAlt: 'Mark Webber Photo',
 		name: 'Mark Webber',
 		workProfile: 'Sale manager Asia',
 		task: 3,
@@ -80,6 +82,7 @@ export const personsHome: PersonHome[] = [
 	{
 		id: 2,
 		avatar: '/assets/img/people/avatar-angela-gray.webp',
+		avatarAlt: 'Angela Gray Photo',
 		name: 'Angela Gray',
 		workProfile: 'Sale manager USA',
 		task: 5,
@@ -89,6 +92,7 @@ export const personsHome: PersonHome[] = [
 	{
 		id: 3,
 		avatar: '/assets/img/people/avatar-jacob-thompson.webp',
+		avatarAlt: 'Jacob Thompson Photo',
 		name: 'Jacob Thompson',
 		workProfile: 'Sale manager Europe',
 		task: 3,
@@ -98,6 +102,7 @@ export const personsHome: PersonHome[] = [
 	{
 		id: 4,
 		avatar: '/assets/img/people/avatar-kimberly-smith.webp',
+		avatarAlt: 'Kimberly Smith Photo',
 		name: 'Kimberly Smith',
 		workProfile: 'Sale manager Australia',
 		task: 4,
@@ -107,6 +112,7 @@ export const personsHome: PersonHome[] = [
 	{
 		id: 5,
 		avatar: '/assets/img/people/avatar-rizky-hasanuddin.webp',
+		avatarAlt: 'Rizky Hasanuddin Photo',
 		name: 'Rizky Hasanuddin',
 		workProfile: 'Sale manager Asia',
 		task: 6,
@@ -116,6 +122,7 @@ export const personsHome: PersonHome[] = [
 	{
 		id: 6,
 		avatar: '/assets/img/people/avatar-nathan-peterson.webp',
+		avatarAlt: 'Nathan Peterson Photo',
 		name: 'Nathan Peterson',
 		workProfile: 'Sale manager USA',
 		task: 2,
@@ -127,6 +134,7 @@ export const personsHome: PersonHome[] = [
 interface Person {
 	id: number;
 	avatar: string;
+	avatarAlt: string;
 	name: string;
 	workProfile: string;
 	email: string;
@@ -143,6 +151,7 @@ export const personsData: Person[] = [
 	{
 		id: 1,
 		avatar: '/assets/img/people/avatar-mark-webber.webp',
+		avatarAlt: 'Mark Webber Photo',
 		name: 'Mark Webber',
 		workProfile: 'Sale manager Asia',
 		email: 'leslie.alexander@example.com',
@@ -158,6 +167,7 @@ export const personsData: Person[] = [
 	{
 		id: 2,
 		avatar: '/assets/img/people/avatar-angela-gray.webp',
+		avatarAlt: 'Angela Gray Photo',
 		name: 'Angela Gray',
 		workProfile: 'Sale manager USA',
 		email: 'michael.foster@example.com',
@@ -173,6 +183,7 @@ export const personsData: Person[] = [
 	{
 		id: 3,
 		avatar: '/assets/img/people/avatar-jacob-thompson.webp',
+		avatarAlt: 'Jacob Thompson Photo',
 		name: 'Jacob Thompson',
 		workProfile: 'Sale manager Europe',
 		email: 'dries.vincent@example.com',
@@ -188,6 +199,7 @@ export const personsData: Person[] = [
 	{
 		id: 4,
 		avatar: '/assets/img/people/avatar-kimberly-smith.webp',
+		avatarAlt: 'Kimberly Smith Photo',
 		name: 'Kimberly Smith',
 		workProfile: 'Sale manager Australia',
 		email: 'lindsay.walton@example.com',
@@ -203,6 +215,7 @@ export const personsData: Person[] = [
 	{
 		id: 5,
 		avatar: '/assets/img/people/avatar-rizky-hasanuddin.webp',
+		avatarAlt: 'Rizky Hasanuddin Photo',
 		name: 'Rizky Hasanuddin',
 		workProfile: 'Sale manager Asia',
 		email: 'courtney.henry@example.com',
@@ -218,6 +231,7 @@ export const personsData: Person[] = [
 	{
 		id: 6,
 		avatar: '/assets/img/people/avatar-nathan-peterson.webp',
+		avatarAlt: 'Nathan Peterson Photo',
 		name: 'Nathan Peterson',
 		workProfile: 'Sale manager USA',
 		email: 'tom.cook@example.com',
@@ -540,6 +554,7 @@ export const userRows = [
 	{
 		id: 1,
 		img: '/assets/img/people/avatar-nathan-peterson.webp',
+		imgAlt: 'Nathan Peterson Photo',
 		firstName: 'Eula',
 		lastName: 'Hubbard',
 		email: 'kewez@@gmail.com',
@@ -556,6 +571,7 @@ export const userRows = [
 	{
 		id: 2,
 		img: '/assets/img/people/avatar-mark-webber.webp',
+		imgAlt: 'Mark Webber Photo',
 		firstName: 'James',
 		lastName: 'Smith',
 		email: 'jsmith@gmail.com',
@@ -572,6 +588,7 @@ export const userRows = [
 	{
 		id: 3,
 		img: '/assets/img/people/avatar-angela-gray.webp',
+		imgAlt: 'Angela Gray Photo',
 		firstName: 'Christopher',
 		lastName: 'Anderson',
 		email: 'canderson@gmail.com',
@@ -588,6 +605,7 @@ export const userRows = [
 	{
 		id: 4,
 		img: '/assets/img/people/avatar-kimberly-smith.webp',
+		imgAlt: 'Kimberly Smith Photo',
 		firstName: 'Mary',
 		lastName: 'Wright',
 		email: 'mwright@gmail.com',
@@ -604,6 +622,7 @@ export const userRows = [
 	{
 		id: 5,
 		img: '/assets/img/people/avatar-nathan-peterson.webp',
+		imgAlt: 'Nathan Peterson Photo',
 		firstName: 'Lisa',
 		lastName: 'Mitchell',
 		email: 'lmitchell@gmail.com',
@@ -620,6 +639,7 @@ export const userRows = [
 	{
 		id: 6,
 		img: '/assets/img/people/avatar-mark-webber.webp',
+		imgAlt: 'Mark Webber Photo',
 		firstName: 'Jonh',
 		lastName: 'Thomas',
 		email: 'jthomas@gmail.com',
@@ -636,6 +656,7 @@ export const userRows = [
 	{
 		id: 7,
 		img: '/assets/img/people/avatar-rizky-hasanuddin.webp',
+		imgAlt: 'Rizky Hasanuddin Photo',
 		firstName: 'Daniel',
 		lastName: 'Rodriguez',
 		email: 'drodriguez@gmail.com',
@@ -652,6 +673,7 @@ export const userRows = [
 	{
 		id: 8,
 		img: '/assets/img/people/avatar-angela-gray.webp',
+		imgAlt: 'Angela Gray Photo',
 		firstName: 'Anthony',
 		lastName: 'Lopez',
 		email: 'alopez@gmail.com',
@@ -668,6 +690,7 @@ export const userRows = [
 	{
 		id: 9,
 		img: '/assets/img/people/avatar-kimberly-smith.webp',
+		imgAlt: 'Kimberly Smith Photo',
 		firstName: 'Patricia',
 		lastName: 'Perez',
 		email: 'pperez@gmail.com',
@@ -684,6 +707,7 @@ export const userRows = [
 	{
 		id: 10,
 		img: '/assets/img/people/avatar-rizky-hasanuddin.webp',
+		imgAlt: 'Rizky Hasanuddin Photo',
 		firstName: 'Nancy',
 		lastName: 'Williams',
 		email: 'nwilliams@gmail.com',
@@ -700,6 +724,7 @@ export const userRows = [
 	{
 		id: 11,
 		img: '/assets/img/people/avatar-mark-webber.webp',
+		imgAlt: 'Mark Webber Photo',
 		firstName: 'Laura',
 		lastName: 'Jackson',
 		email: 'ljackson@gmail.com',
@@ -716,6 +741,7 @@ export const userRows = [
 	{
 		id: 12,
 		img: '/assets/img/people/avatar-nathan-peterson.webp',
+		imgAlt: 'Nathan Peterson Photo',
 		firstName: 'Robert',
 		lastName: 'Lewis',
 		email: 'rlewis@gmail.com',
@@ -732,6 +758,7 @@ export const userRows = [
 	{
 		id: 13,
 		img: '/assets/img/people/avatar-angela-gray.webp',
+		imgAlt: 'Angela Gray Photo',
 		firstName: 'Paul',
 		lastName: 'Hill',
 		email: 'phill@gmail.com',
@@ -748,6 +775,7 @@ export const userRows = [
 	{
 		id: 14,
 		img: '/assets/img/people/avatar-kimberly-smith.webp',
+		imgAlt: 'Kimberly Smith Photo',
 		firstName: 'Kevin',
 		lastName: 'Roberts',
 		email: 'kroberts@gmail.com',
@@ -764,6 +792,7 @@ export const userRows = [
 	{
 		id: 15,
 		img: '/assets/img/people/avatar-rizky-hasanuddin.webp',
+		imgAlt: 'Rizky Hasanuddin Photo',
 		firstName: 'Linda',
 		lastName: 'Jones',
 		email: 'ljones@gmail.com',
@@ -780,6 +809,7 @@ export const userRows = [
 	{
 		id: 16,
 		img: '/assets/img/people/avatar-rizky-hasanuddin.webp',
+		imgAlt: 'Rizky Hasanuddin Photo',
 		firstName: 'Karen',
 		lastName: 'White',
 		email: 'kwhite@gmail.com',
@@ -796,6 +826,7 @@ export const userRows = [
 	{
 		id: 17,
 		img: '/assets/img/people/avatar-nathan-peterson.webp',
+		imgAlt: 'Nathan Peterson Photo',
 		firstName: 'Sarah',
 		lastName: 'Lee',
 		email: 'slee@gmail.com',
@@ -812,6 +843,7 @@ export const userRows = [
 	{
 		id: 18,
 		img: '/assets/img/people/avatar-nathan-peterson.webp',
+		imgAlt: 'Nathan Peterson Photo',
 		firstName: 'Eula',
 		lastName: 'Hubbard',
 		email: 'kewez@@gmail.com',
@@ -828,6 +860,7 @@ export const userRows = [
 	{
 		id: 19,
 		img: '/assets/img/people/avatar-mark-webber.webp',
+		imgAlt: 'Mark Webber Photo',
 		firstName: 'James',
 		lastName: 'Smith',
 		email: 'jsmith@gmail.com',
@@ -844,6 +877,7 @@ export const userRows = [
 	{
 		id: 20,
 		img: '/assets/img/people/avatar-angela-gray.webp',
+		imgAlt: 'Angela Gray Photo',
 		firstName: 'Christopher',
 		lastName: 'Anderson',
 		email: 'canderson@gmail.com',
@@ -860,6 +894,7 @@ export const userRows = [
 	{
 		id: 21,
 		img: '/assets/img/people/avatar-kimberly-smith.webp',
+		imgAlt: 'Kimberly Smith Photo',
 		firstName: 'Mary',
 		lastName: 'Wright',
 		email: 'mwright@gmail.com',
@@ -876,6 +911,7 @@ export const userRows = [
 	{
 		id: 22,
 		img: '/assets/img/people/avatar-nathan-peterson.webp',
+		imgAlt: 'Nathan Peterson Photo',
 		firstName: 'Lisa',
 		lastName: 'Mitchell',
 		email: 'lmitchell@gmail.com',
@@ -892,6 +928,7 @@ export const userRows = [
 	{
 		id: 23,
 		img: '/assets/img/people/avatar-mark-webber.webp',
+		imgAlt: 'Mark Webber Photo',
 		firstName: 'Jonh',
 		lastName: 'Thomas',
 		email: 'jthomas@gmail.com',
@@ -924,6 +961,7 @@ export const userRows = [
 	{
 		id: 25,
 		img: '/assets/img/people/avatar-angela-gray.webp',
+		imgAlt: 'Angela Gray Photo',
 		firstName: 'Anthony',
 		lastName: 'Lopez',
 		email: 'alopez@gmail.com',
@@ -940,6 +978,7 @@ export const userRows = [
 	{
 		id: 26,
 		img: '/assets/img/people/avatar-kimberly-smith.webp',
+		imgAlt: 'Kimberly Smith Photo',
 		firstName: 'Patricia',
 		lastName: 'Perez',
 		email: 'pperez@gmail.com',
@@ -956,6 +995,7 @@ export const userRows = [
 	{
 		id: 27,
 		img: '/assets/img/people/avatar-rizky-hasanuddin.webp',
+		imgAlt: 'Rizky Hasanuddin Photo',
 		firstName: 'Nancy',
 		lastName: 'Williams',
 		email: 'nwilliams@gmail.com',
@@ -972,6 +1012,7 @@ export const userRows = [
 	{
 		id: 28,
 		img: '/assets/img/people/avatar-mark-webber.webp',
+		imgAlt: 'Mark Webber Photo',
 		firstName: 'Laura',
 		lastName: 'Jackson',
 		email: 'ljackson@gmail.com',
@@ -988,6 +1029,7 @@ export const userRows = [
 	{
 		id: 29,
 		img: '/assets/img/people/avatar-nathan-peterson.webp',
+		imgAlt: 'Nathan Peterson Photo',
 		firstName: 'Robert',
 		lastName: 'Lewis',
 		email: 'rlewis@gmail.com',
@@ -1004,6 +1046,7 @@ export const userRows = [
 	{
 		id: 30,
 		img: '/assets/img/people/avatar-angela-gray.webp',
+		imgAlt: 'Angela Gray Photo',
 		firstName: 'Paul',
 		lastName: 'Hill',
 		email: 'phill@gmail.com',
@@ -1020,6 +1063,7 @@ export const userRows = [
 	{
 		id: 31,
 		img: '/assets/img/people/avatar-kimberly-smith.webp',
+		imgAlt: 'Kimberly Smith Photo',
 		firstName: 'Kevin',
 		lastName: 'Roberts',
 		email: 'kroberts@gmail.com',
@@ -1036,6 +1080,7 @@ export const userRows = [
 	{
 		id: 32,
 		img: '/assets/img/people/avatar-rizky-hasanuddin.webp',
+		imgAlt: 'Rizky Hasanuddin Photo',
 		firstName: 'Linda',
 		lastName: 'Jones',
 		email: 'ljones@gmail.com',
@@ -1052,6 +1097,7 @@ export const userRows = [
 	{
 		id: 33,
 		img: '/assets/img/people/avatar-rizky-hasanuddin.webp',
+		imgAlt: 'Rizky Hasanuddin Photo',
 		firstName: 'Karen',
 		lastName: 'White',
 		email: 'kwhite@gmail.com',
@@ -1068,6 +1114,7 @@ export const userRows = [
 	{
 		id: 34,
 		img: '/assets/img/people/avatar-nathan-peterson.webp',
+		imgAlt: 'Nathan Peterson Photo',
 		firstName: 'Sarah',
 		lastName: 'Lee',
 		email: 'slee@gmail.com',

@@ -13,6 +13,7 @@ const Message = () => {
 							<div className='flex-shrink-0'>
 								<img
 									src={person.avatar}
+									alt={person.avatarAlt}
 									className='h-10 w-10 rounded-full ml-1'
 								/>
 							</div>

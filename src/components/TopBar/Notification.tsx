@@ -58,7 +58,7 @@ const Notification: React.FC<SidebarProps> = ({
 							<div className='flex-shrink-0 pt-0.5'>
 								<img
 									src={person.avatar}
-									alt='Avatar'
+									alt={person.avatarAlt}
 									className='h-10 w-10 rounded-full'
 								/>
 							</div>

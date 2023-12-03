@@ -79,16 +79,16 @@ const HomeInvoices = () => {
 						</div>
 						<dl className='-my-3 px-1 py-1 text-sm leading-6 '>
 							<div className='flex justify-between gap-x-4 py-1'>
-								<dt className='text-gray-400 text-xs'>Last invoice</dt>
-								<dd className='text-gray-400 text-xs'>
+								<div className='text-gray-400 text-xs'>Last invoice</div>
+								<div className='text-gray-400 text-xs'>
 									<time dateTime={client.lastInvoice.dateTime}>
 										{client.lastInvoice.date}
 									</time>
-								</dd>
+								</div>
 							</div>
 							<div className='flex justify-between gap-x-4 py-1'>
-								<dt className='text-gray-400 text-xs'>Amount</dt>
-								<dd className='flex items-start gap-x-2'>
+								<div className='text-gray-400 text-xs'>Amount</div>
+								<div className='flex items-start gap-x-2'>
 									<div className='font-medium text-white'>
 										{client.lastInvoice.amount}
 									</div>
@@ -100,7 +100,7 @@ const HomeInvoices = () => {
 									>
 										{client.lastInvoice.status}
 									</div>
-								</dd>
+								</div>
 							</div>
 						</dl>
 					</li>

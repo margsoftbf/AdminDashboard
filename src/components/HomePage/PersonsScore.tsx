@@ -22,7 +22,11 @@ const PersonsScore = () => {
 						<div className='w-3/5 h-full flex flex-col items-start p-2'>
 							<div className='flex items-center'>
 								<div>
-									<img src={person.avatar} className='w-8 h-8' />
+									<img
+										src={person.avatar}
+										alt={person.avatarAlt}
+										className='w-8 h-8'
+									/>
 								</div>
 								<div className='flex flex-col text-sm text-left ml-2'>
 									<p className='font-semibold text-white'>{person.name}</p>
