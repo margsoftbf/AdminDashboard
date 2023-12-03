@@ -16,13 +16,13 @@ function classNames(...classes: string[]): string {
 const HomeInvoices = () => {
 	return (
 		<div className='bg-lightGray rounded-md max-h-[530px] overflow-auto'>
-			<h2 className='font-semibold mt-2 text-xl text-white'>Invoices</h2>
+			<h2 className='font-semibold mt-2 ml-2 text-xl text-white'>Invoices</h2>
 			<ul
 				role='list'
 				className='grid grid-cols-1 gap-x-6 gap-y-4 xl:gap-x-8 px-4 mt-4'
 			>
 				{clients.map((client) => (
-					<li key={client.id} className='overflow-hidden my-2'>
+					<li key={client.id} className=' my-2'>
 						<div
 							className={`flex items-center gap-x-4 border-b border-gray-900/5  py-1 relative  before:content-[''] before:absolute before:h-[1px] before:w-full before:bg-gray-500 before:bottom-2`}
 						>
