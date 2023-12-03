@@ -19,6 +19,7 @@ import {
 } from 'date-fns';
 import Modal from '../components/Calendar/Modal';
 import MeetingComponent from '../components/Calendar/Meeting';
+import { motion } from 'framer-motion';
 
 interface Meeting {
 	id: string;
@@ -65,9 +66,11 @@ export default function Calendar() {
 	);
 
 	const handleDelete = (meetingId: string) => {
-		const updatedMeetings = meetings.filter(meeting => meeting.id !== meetingId);
+		const updatedMeetings = meetings.filter(
+			(meeting) => meeting.id !== meetingId
+		);
 		setMeetings(updatedMeetings);
-	  }
+	};
 
 	useEffect(() => {
 		let newFirstDayCurrentMonth = parse(
@@ -79,7 +82,12 @@ export default function Calendar() {
 	}, [selectedDay]);
 
 	return (
-		<div className='lg:flex lg:h-full lg:flex-col'>
+		<motion.div
+			className='lg:flex lg:h-full lg:flex-col'
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
+		>
 			<Modal
 				isOpen={modalOpen}
 				onClose={closeModal}
@@ -223,7 +231,11 @@ export default function Calendar() {
 					<ol className='my-4 pb-1 space-y-1 text-sm leading-6 text-gray-500'>
 						{selectedDayMeetings.length > 0 ? (
 							meetings.map((meeting) => (
-								<MeetingComponent meeting={meeting} key={meeting.id} onDelete={handleDelete} />
+								<MeetingComponent
+									meeting={meeting}
+									key={meeting.id}
+									onDelete={handleDelete}
+								/>
 							))
 						) : (
 							<p className='mb-4'>No meetings for today.</p>
@@ -231,7 +243,7 @@ export default function Calendar() {
 					</ol>
 				</section>
 			</div>
-		</div>
+		</motion.div>
 	);
 }
 
