@@ -8,8 +8,8 @@ const Home = () => {
 		<div>
 			<PersonsScore />
 			<HomeCharts />
-			<HomeBoxes />
 			<HomeStats />
+			<HomeBoxes />
 		</div>
 	);
 };

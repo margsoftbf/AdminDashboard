@@ -46,7 +46,7 @@ const HomeInvoices = () => {
 									leaveFrom='transform opacity-100 scale-100'
 									leaveTo='transform opacity-0 scale-95'
 								>
-									<Menu.Items className='absolute right-0 z-10 mt-0.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none z-50'>
+									<Menu.Items className='absolute right-0 mt-0.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none z-50'>
 										<Menu.Item>
 											{({ active }) => (
 												<a

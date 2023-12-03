@@ -62,14 +62,16 @@ const HomeStats = () => {
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
 		>
-			<dl className='mt-5 grid gap-5 overflow-hidden rounded-lg shadow grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6'>
+			<div className='mt-5 grid gap-5 overflow-hidden rounded-lg shadow grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6'>
 				{stats.map((item) => (
 					<div
 						key={item.id}
-						className='px-4 py-5 sm:p-6 bg-lightGray rounded-md'
+						className='px-4 py-5 sm:p-6 bg-lightGray rounded-md border border-lightViolet'
 					>
-						<dt className='text-base font-normal text-gray-100'>{item.name}</dt>
-						<dd className='mt-1 flex flex- items-baseline justify-between'>
+						<div className='text-base font-normal text-gray-100'>
+							{item.name}
+						</div>
+						<div className='mt-1 flex flex- items-baseline justify-between'>
 							<div className='flex items-baseline text-2xl font-semibold text-indigo-600 font-sans'>
 								{item.stat}
 								<span className='ml-2 text-sm font-medium text-gray-500'>
@@ -106,10 +108,10 @@ const HomeStats = () => {
 								</span>
 								{item.change}
 							</div>
-						</dd>
+						</div>
 					</div>
 				))}
-			</dl>
+			</div>
 		</motion.div>
 	);
 };
