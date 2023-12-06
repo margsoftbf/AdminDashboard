@@ -7,3 +7,19 @@
 		@apply bg-[#1f1e26];
 	}
 }
+
+@layer utilities {
+	.scrollbar::-webkit-scrollbar {
+		width: 4px;
+	}
+
+	.scrollbar::-webkit-scrollbar:horizontal {
+		height: 8px;
+	}
+
+	.scrollbar::-webkit-scrollbar-thumb {
+		background: #6270ec;
+		border-radius: 100vh;
+		border: 3px solid #6270ec;
+	}
+}

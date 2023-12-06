@@ -1,8 +1,11 @@
+import Profile from './Profile';
 
 const Settings = () => {
-  return (
-    <div>Settings</div>
-  )
-}
+	return (
+		<div>
+			<Profile />
+		</div>
+	);
+};
 
-export default Settings
+export default Settings;

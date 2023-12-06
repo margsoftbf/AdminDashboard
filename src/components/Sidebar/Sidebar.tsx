@@ -3,7 +3,6 @@ import { Dialog, Menu, Transition } from '@headlessui/react';
 import {
 	Bars3Icon,
 	BellIcon,
-	Cog6ToothIcon,
 	XMarkIcon,
 	ShoppingCartIcon,
 	ChatBubbleLeftIcon,
@@ -147,18 +146,6 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 													))}
 												</ul>
 											</li>
-											<li className='mt-auto'>
-												<Link
-													to='/settings'
-													className='group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-darkViolet hover:text-white'
-												>
-													<Cog6ToothIcon
-														className='h-6 w-6 shrink-0'
-														aria-hidden='true'
-													/>
-													Settings
-												</Link>
-											</li>
 										</ul>
 									</nav>
 								</div>
@@ -199,19 +186,6 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 										</li>
 									))}
 								</ul>
-							</li>
-
-							<li className='mt-auto'>
-								<Link
-									to='/settings'
-									className='group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-darkViolet hover:text-white'
-								>
-									<Cog6ToothIcon
-										className='h-6 w-6 shrink-0'
-										aria-hidden='true'
-									/>
-									Settings
-								</Link>
 							</li>
 						</ul>
 					</nav>

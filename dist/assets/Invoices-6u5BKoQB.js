@@ -1,0 +1,1 @@
+import{j as t}from"./index-MPkIUv_x.js";import{m as i}from"./motion-bBb3oEWX.js";const a=()=>t.jsx(i.div,{className:"w-full h-auto bg-lightGray rounded-md",initial:{opacity:0},animate:{opacity:1},transition:{duration:1,ease:[.6,-.05,.01,.99]},children:t.jsx("h2",{className:"text-left ml-4 mt-4 font-semibold text-white",children:"Invoices App"})});export{a as default};

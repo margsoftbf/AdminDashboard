@@ -1392,3 +1392,78 @@ export const productRows = [
 		address: 'New York, USA',
 	},
 ];
+
+export type Id = string | number;
+
+export interface Column {
+	id: string | number;
+	title: string;
+}
+export interface Task {
+	id: string | number;
+	columnId: string | number;
+	content: string;
+}
+
+export const defaultCols: Column[] = [
+	{
+		id: 'todo',
+		title: 'Todo',
+	},
+	{
+		id: 'work',
+		title: 'Work',
+	},
+	{
+		id: 'home',
+		title: 'Home',
+	},
+];
+
+export const defaultTasks: Task[] = [
+	{
+		id: '1',
+		columnId: 'todo',
+		content: '1st Task',
+	},
+	{
+		id: '2',
+		columnId: 'todo',
+		content: '2nd Task',
+	},
+	{
+		id: '3',
+		columnId: 'todo',
+		content: '3rd Task',
+	},
+	{
+		id: '4',
+		columnId: 'work',
+		content: '1st Task',
+	},
+	{
+		id: '5',
+		columnId: 'work',
+		content: '2nd Task',
+	},
+	{
+		id: '6',
+		columnId: 'work',
+		content: '3rd Task',
+	},
+	{
+		id: '7',
+		columnId: 'home',
+		content: '1st Task',
+	},
+	{
+		id: '8',
+		columnId: 'home',
+		content: '2nd Task',
+	},
+	{
+		id: '9',
+		columnId: 'home',
+		content: '3rd Task',
+	},
+];

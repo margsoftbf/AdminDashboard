@@ -222,7 +222,7 @@ export default function Calendar() {
 					</div>
 				</div>
 				<section className='mt-4'>
-					<h2 className='text-base font-sans font-semibold leading-6 text-gray-900'>
+					<h2 className='text-base font-sans font-semibold text-center leading-6 text-gray-900'>
 						Schedule for{' '}
 						<time dateTime={format(selectedDay, 'yyyy-MM-dd')}>
 							{format(selectedDay, 'MMM dd, yyy')}
@@ -238,7 +238,7 @@ export default function Calendar() {
 								/>
 							))
 						) : (
-							<p className='mb-4'>No meetings for today.</p>
+							<p className='mb-4 text-center'>No meetings for today.</p>
 						)}
 					</ol>
 				</section>

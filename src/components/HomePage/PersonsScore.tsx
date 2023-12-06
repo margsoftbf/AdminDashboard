@@ -13,7 +13,7 @@ const PersonsScore = () => {
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
 		>
-			<div className='mx-auto grid max-w-10xl gap-4 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 lg:px-2 xl:px-0'>
+			<div className='mx-auto grid max-w-10xl gap-4 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 lg:px-2 xl:px-0'>
 				{persons.map((person) => (
 					<div
 						key={person.id}

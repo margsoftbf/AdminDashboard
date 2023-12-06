@@ -17,7 +17,6 @@ const BarChart = lazy(() => import('./pages/BarChart'));
 const PieChart = lazy(() => import('./pages/PieChart'));
 const LineChart = lazy(() => import('./pages/LineChart'));
 const Faq = lazy(() => import('./pages/Faq'));
-const Settings = lazy(() => import('./pages/Settings'));
 
 function App() {
 	return (
@@ -41,7 +40,6 @@ function App() {
 							<Route path='/pie-chart' element={<PieChart />} />
 							<Route path='/line-chart' element={<LineChart />} />
 							<Route path='/faq' element={<Faq />} />
-							<Route path='/settings' element={<Settings />} />
 						</Routes>
 					</Suspense>
 				)}

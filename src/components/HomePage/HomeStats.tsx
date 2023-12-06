@@ -62,7 +62,7 @@ const HomeStats = () => {
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
 		>
-			<div className='mt-5 grid gap-5 overflow-hidden rounded-lg shadow grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6'>
+			<div className='mt-5 grid gap-5 overflow-hidden rounded-lg shadow grid-cols-1 sm:grid-cols-2 xl:grid-cols-3'>
 				{stats.map((item) => (
 					<div
 						key={item.id}
