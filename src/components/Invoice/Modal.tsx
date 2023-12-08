@@ -6,6 +6,7 @@ import { Dispatch, SetStateAction } from 'react';
 
 interface ModalProps {
 	isOpen: boolean;
+	onClose: () => void;
 	closeModal: () => void;
 	setMeetings: Dispatch<SetStateAction<Meeting[]>>;
 }
@@ -18,7 +19,12 @@ interface Meeting {
 	date: string;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, closeModal, setMeetings }) => {
+const Modal: React.FC<ModalProps> = ({
+	isOpen,
+	onClose,
+	closeModal,
+	setMeetings,
+}) => {
 	const modalRoot = document.getElementById('modal-root');
 	const [newMeeting, setNewMeeting] = useState({
 		date: '',
@@ -70,7 +76,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, closeModal, setMeetings }) => {
 				<div className='modal relative flex justify-center items-center bg-white rounded-md p-5 max-w-[80%] max-h-[80%] overflow-auto'>
 					<XMarkIcon
 						className='w-5 h-5 absolute top-2 right-2 bg-none border-none text-2xl cursor-pointer'
-						onClick={closeModal}
+						onClick={onClose}
 					/>
 					<form onSubmit={handleSubmit}>
 						<div className='space-y-12 sm:space-y-16'>
@@ -168,7 +174,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, closeModal, setMeetings }) => {
 
 						<div className='mt-6 flex items-center justify-end gap-x-6'>
 							<button
-								onClick={closeModal}
+								onClick={onClose}
 								type='button'
 								className='text-sm font-semibold leading-6 text-gray-900'
 							>

@@ -1467,3 +1467,82 @@ export const defaultTasks: Task[] = [
 		content: '3rd Task',
 	},
 ];
+export interface InvoiceData {
+	id: string;
+	clientName: string;
+	emailAddress: string;
+	streetAddress: string;
+	city: string;
+	state: string;
+	zipCode: number;
+	amount: number;
+	status: string;
+}
+export const invoices: InvoiceData[] = [
+	{
+		id: 'PQ1234',
+		clientName: 'John Doe',
+		emailAddress: 'john.doe@example.com',
+		streetAddress: '123 Main Street',
+		city: 'Cityville',
+		state: 'CA',
+		zipCode: 90210,
+		amount: 1500,
+		status: 'Paid',
+	},
+	{
+		id: 'PQ5678',
+		clientName: 'Jane Smith',
+		emailAddress: 'jane.smith@example.com',
+		streetAddress: '456 Oak Avenue',
+		city: 'Villagetown',
+		state: 'NY',
+		zipCode: 10001,
+		amount: 2000,
+		status: 'Pending',
+	},
+	{
+		id: 'PQ9123',
+		clientName: 'Bob Johnson',
+		emailAddress: 'bob.johnson@example.com',
+		streetAddress: '789 Pine Road',
+		city: 'Townsville',
+		state: 'TX',
+		zipCode: 75001,
+		amount: 1800,
+		status: 'Cancelled',
+	},
+	{
+		id: 'PQ4567',
+		clientName: 'Alice Williams',
+		emailAddress: 'alice.williams@example.com',
+		streetAddress: '101 Cedar Lane',
+		city: 'Hamletville',
+		state: 'FL',
+		zipCode: 33101,
+		amount: 2200,
+		status: 'Pending',
+	},
+	{
+		id: 'PQ8912',
+		clientName: 'Charlie Brown',
+		emailAddress: 'charlie.brown@example.com',
+		streetAddress: '202 Elm Street',
+		city: 'Villagetown',
+		state: 'NY',
+		zipCode: 10002,
+		amount: 1900,
+		status: 'Paid',
+	},
+	{
+		id: 'PQ3456',
+		clientName: 'Eve Davis',
+		emailAddress: 'eve.davis@example.com',
+		streetAddress: '303 Maple Avenue',
+		city: 'Townsville',
+		state: 'TX',
+		zipCode: 75002,
+		amount: 2100,
+		status: 'Pending',
+	},
+];

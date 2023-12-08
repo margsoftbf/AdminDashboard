@@ -15,6 +15,7 @@ import { createPortal } from 'react-dom';
 import TaskCard from '../components/Kanban/TaskCard';
 import { defaultCols, defaultTasks, Column, Task, Id } from '../data/data';
 import { v4 as uuidv4 } from 'uuid';
+import { motion } from 'framer-motion';
 export default function Kanban() {
 	const [columns, setColumns] = useState<Column[]>(defaultCols);
 	const columnsId = useMemo(
@@ -116,7 +117,12 @@ export default function Kanban() {
 	};
 
 	return (
-		<div className='flex flex-col m-auto h-full w-full p-2'>
+		<motion.div
+			className='flex flex-col m-auto h-full w-full p-2'
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
+		>
 			<DndContext
 				sensors={sensors}
 				onDragStart={onDragStart}
@@ -173,6 +179,6 @@ export default function Kanban() {
 					document.body
 				)}
 			</DndContext>
-		</div>
+		</motion.div>
 	);
 }

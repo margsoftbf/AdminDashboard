@@ -77,7 +77,7 @@ const HomeInvoices = () => {
 								</Transition>
 							</Menu>
 						</div>
-						<dl className='-my-3 px-1 py-1 text-sm leading-6 '>
+						<div className='-my-3 px-1 py-1 text-sm leading-6 '>
 							<div className='flex justify-between gap-x-4 py-1'>
 								<div className='text-gray-400 text-xs'>Last invoice</div>
 								<div className='text-gray-400 text-xs'>
@@ -102,7 +102,7 @@ const HomeInvoices = () => {
 									</div>
 								</div>
 							</div>
-						</dl>
+						</div>
 					</li>
 				))}
 			</ul>

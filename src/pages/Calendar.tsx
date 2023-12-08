@@ -90,7 +90,6 @@ export default function Calendar() {
 		>
 			<Modal
 				isOpen={modalOpen}
-				onClose={closeModal}
 				closeModal={closeModal}
 				setMeetings={setMeetings}
 			/>
