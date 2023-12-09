@@ -122,8 +122,8 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 																		location.pathname === item.href
 																			? 'bg-lightViolet text-white'
 																			: 'text-gray-400 hover:text-white hover:bg-darkViolet'
-																	},
-																	'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
+																	}
+															group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold
 																`}
 																onClick={() => setSidebarOpen(false)}
 															>
