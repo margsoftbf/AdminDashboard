@@ -1,16 +1,11 @@
 import { TrashIcon } from '@heroicons/react/24/outline';
-import { Task, Id } from '../../data/data';
 import { useState } from 'react';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
+import { TaskCardProps } from '../../types/types';
 
-interface Props {
-	task: Task;
-	deleteTask: (id: Id) => void;
-	updateTask: (id: Id, content: string) => void;
-}
 
-function TaskCard({ task, deleteTask, updateTask }: Props) {
+function TaskCard({ task, deleteTask, updateTask }: TaskCardProps) {
 	const [mouseIsOver, setMouseIsOver] = useState(false);
 	const [editMode, setEditMode] = useState(false);
 

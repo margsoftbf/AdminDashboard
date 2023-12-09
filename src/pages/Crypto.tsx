@@ -4,18 +4,8 @@ import {
 } from '@heroicons/react/20/solid';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { CryptoProps } from '../types/types';
 
-interface CryptoProps {
-	id: number;
-	name: string;
-	image: string;
-	symbol: string;
-	current_price: number;
-	price_change_percentage_24h: number;
-	market_cap: number;
-	market_cap_rank: number;
-	ath: number;
-}
 
 const coinsArray = [
 	{

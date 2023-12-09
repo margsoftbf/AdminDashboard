@@ -13,7 +13,8 @@ import {
 import { SortableContext, arrayMove } from '@dnd-kit/sortable';
 import { createPortal } from 'react-dom';
 import TaskCard from '../components/Kanban/TaskCard';
-import { defaultCols, defaultTasks, Column, Task, Id } from '../data/data';
+import { defaultCols, defaultTasks } from '../data/data';
+import { Column, Id, Task } from '../types/types';
 import { v4 as uuidv4 } from 'uuid';
 import { motion } from 'framer-motion';
 export default function Kanban() {

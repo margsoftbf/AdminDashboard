@@ -1,59 +1,6 @@
 import { ArrowDownIcon, ArrowUpIcon } from '@heroicons/react/20/solid';
 import { motion } from 'framer-motion';
-const stats = [
-	{
-		id: 1,
-		name: 'Total Subscribers',
-		stat: '73,210',
-		previousStat: '71,897',
-		change: '1,313',
-		changeType: 'increase',
-	},
-	{
-		id: 2,
-		name: 'Avg. Open Rate',
-		stat: '57.89%',
-		previousStat: '58.16%',
-		change: '0.27%',
-		changeType: 'decrease',
-	},
-	{
-		id: 3,
-		name: 'Avg. Click Rate',
-		stat: '22.35%',
-		previousStat: '24.57%',
-		change: '2.22%',
-		changeType: 'decrease',
-	},
-	{
-		id: 4,
-		name: 'Avg. New Subscriber',
-		stat: '30.11%',
-		previousStat: '28.62%',
-		change: '1.49%',
-		changeType: 'increase',
-	},
-	{
-		id: 5,
-		name: 'Avg. Customer',
-		stat: '26.75%',
-		previousStat: '24.57%',
-		change: '2.18%',
-		changeType: 'increase',
-	},
-	{
-		id: 6,
-		name: 'Avg. Invoices',
-		stat: '23.25%',
-		previousStat: '24.57%',
-		change: '1.32%',
-		changeType: 'decrease',
-	},
-];
-
-function classNames(...classes: string[]) {
-	return classes.filter(Boolean).join(' ');
-}
+import { stats } from '../../data/data';
 
 const HomeStats = () => {
 	return (
@@ -80,12 +27,14 @@ const HomeStats = () => {
 							</div>
 
 							<div
-								className={classNames(
-									item.changeType === 'increase'
-										? 'bg-green-100 text-green-800'
-										: 'bg-red-100 text-red-800',
-									'inline-flex items-baseline rounded-full px-2.5 py-0.5 text-sm font-medium md:mt-2 lg:mt-0'
-								)}
+								className={`
+									${
+										item.changeType === 'increase'
+											? 'bg-green-100 text-green-800'
+											: 'bg-red-100 text-red-800'
+									}
+									inline-flex items-baseline rounded-full px-2.5 py-0.5 text-sm font-medium md:mt-2 lg:mt-0
+								`}
 							>
 								{item.changeType === 'increase' ? (
 									<ArrowUpIcon

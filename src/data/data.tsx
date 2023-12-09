@@ -11,9 +11,15 @@ import {
 	QuestionMarkCircleIcon,
 	ChartBarIcon,
 	ChartBarSquareIcon,
+	MapPinIcon,
+	PencilSquareIcon,
+	TrashIcon,
+	XCircleIcon,
+	CheckCircleIcon,
 } from '@heroicons/react/24/outline';
 import { RiProfileLine } from 'react-icons/ri';
 import { BsPerson } from 'react-icons/bs';
+import { PersonHome, Person, Column, Task, InvoiceData } from '../types/types';
 
 export const navigation = [
 	{ name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
@@ -56,17 +62,6 @@ export const navigation = [
 		current: false,
 	},
 ];
-
-interface PersonHome {
-	id: number;
-	avatar: string;
-	avatarAlt: string;
-	name: string;
-	workProfile: string;
-	task: number;
-	trend: boolean;
-	money: number;
-}
 
 export const personsHome: PersonHome[] = [
 	{
@@ -130,22 +125,6 @@ export const personsHome: PersonHome[] = [
 		money: 250,
 	},
 ];
-
-interface Person {
-	id: number;
-	avatar: string;
-	avatarAlt: string;
-	name: string;
-	workProfile: string;
-	email: string;
-	role: string;
-	react: string;
-	message: string;
-	checked: boolean;
-	lastSeen: string | null | undefined;
-	lastSeenDateTime: string | null | undefined;
-	content: string;
-}
 
 export const personsData: Person[] = [
 	{
@@ -1393,18 +1372,6 @@ export const productRows = [
 	},
 ];
 
-export type Id = string | number;
-
-export interface Column {
-	id: string | number;
-	title: string;
-}
-export interface Task {
-	id: string | number;
-	columnId: string | number;
-	content: string;
-}
-
 export const defaultCols: Column[] = [
 	{
 		id: 'todo',
@@ -1467,17 +1434,7 @@ export const defaultTasks: Task[] = [
 		content: '3rd Task',
 	},
 ];
-export interface InvoiceData {
-	id: string;
-	clientName: string;
-	emailAddress: string;
-	streetAddress: string;
-	city: string;
-	state: string;
-	zipCode: number;
-	amount: number;
-	status: string;
-}
+
 export const invoices: InvoiceData[] = [
 	{
 		id: 'PQ1234',
@@ -1544,5 +1501,647 @@ export const invoices: InvoiceData[] = [
 		zipCode: 75002,
 		amount: 2100,
 		status: 'Pending',
+	},
+];
+
+export const stats = [
+	{
+		id: 1,
+		name: 'Total Subscribers',
+		stat: '73,210',
+		previousStat: '71,897',
+		change: '1,313',
+		changeType: 'increase',
+	},
+	{
+		id: 2,
+		name: 'Avg. Open Rate',
+		stat: '57.89%',
+		previousStat: '58.16%',
+		change: '0.27%',
+		changeType: 'decrease',
+	},
+	{
+		id: 3,
+		name: 'Avg. Click Rate',
+		stat: '22.35%',
+		previousStat: '24.57%',
+		change: '2.22%',
+		changeType: 'decrease',
+	},
+	{
+		id: 4,
+		name: 'Avg. New Subscriber',
+		stat: '30.11%',
+		previousStat: '28.62%',
+		change: '1.49%',
+		changeType: 'increase',
+	},
+	{
+		id: 5,
+		name: 'Avg. Customer',
+		stat: '26.75%',
+		previousStat: '24.57%',
+		change: '2.18%',
+		changeType: 'increase',
+	},
+	{
+		id: 6,
+		name: 'Avg. Invoices',
+		stat: '23.25%',
+		previousStat: '24.57%',
+		change: '1.32%',
+		changeType: 'decrease',
+	},
+];
+
+// BarChart
+
+export const BarChartData = [
+	{
+		country: 'Poland',
+		pizza: 120,
+		pizzaColor: 'hsl(180, 70%, 50%)',
+		pasta: 25,
+		pastaColor: 'hsl(90, 70%, 50%)',
+		burger: 150,
+		burgerColor: 'hsl(45, 70%, 50%)',
+		Sushi: 80,
+		SushiColor: 'hsl(270, 70%, 50%)',
+		Fries: 90,
+		FriesColor: 'hsl(120, 70%, 50%)',
+		'Ice cream': 200,
+		iceCreamColor: 'hsl(300, 70%, 50%)',
+	},
+	{
+		country: 'Italy',
+		pizza: 15,
+		pizzaColor: 'hsl(200, 70%, 50%)',
+		pasta: 100,
+		pastaColor: 'hsl(150, 70%, 50%)',
+		burger: 120,
+		burgerColor: 'hsl(270, 70%, 50%)',
+		Sushi: 20,
+		SushiColor: 'hsl(300, 70%, 50%)',
+		Fries: 130,
+		FriesColor: 'hsl(200, 70%, 50%)',
+		'Ice cream': 70,
+		iceCreamColor: 'hsl(320, 70%, 50%)',
+	},
+	{
+		country: 'Japan',
+		pizza: 30,
+		pizzaColor: 'hsl(250, 70%, 50%)',
+		pasta: 5,
+		pastaColor: 'hsl(60, 70%, 50%)',
+		burger: 90,
+		burgerColor: 'hsl(150, 70%, 50%)',
+		Sushi: 120,
+		SushiColor: 'hsl(190, 70%, 50%)',
+		Fries: 80,
+		FriesColor: 'hsl(220, 70%, 50%)',
+		'Ice cream': 50,
+		iceCreamColor: 'hsl(340, 70%, 50%)',
+	},
+	{
+		country: 'USA',
+		pizza: 150,
+		pizzaColor: 'hsl(160, 70%, 50%)',
+		pasta: 20,
+		pastaColor: 'hsl(80, 70%, 50%)',
+		burger: 30,
+		burgerColor: 'hsl(30, 70%, 50%)',
+		Sushi: 70,
+		SushiColor: 'hsl(340, 70%, 50%)',
+		Fries: 100,
+		FriesColor: 'hsl(130, 70%, 50%)',
+		'Ice cream': 20,
+		iceCreamColor: 'hsl(160, 70%, 50%)',
+	},
+	{
+		country: 'France',
+		pizza: 25,
+		pizzaColor: 'hsl(190, 70%, 50%)',
+		pasta: 30,
+		pastaColor: 'hsl(240, 70%, 50%)',
+		burger: 160,
+		burgerColor: 'hsl(260, 70%, 50%)',
+		Sushi: 50,
+		SushiColor: 'hsl(180, 70%, 50%)',
+		Fries: 160,
+		FriesColor: 'hsl(210, 70%, 50%)',
+		'Ice cream': 10,
+		iceCreamColor: 'hsl(320, 70%, 50%)',
+	},
+	{
+		country: 'Greece',
+		pizza: 130,
+		pizzaColor: 'hsl(80, 70%, 50%)',
+		pasta: 120,
+		pastaColor: 'hsl(240, 70%, 50%)',
+		burger: 180,
+		burgerColor: 'hsl(160, 70%, 50%)',
+		Sushi: 130,
+		SushiColor: 'hsl(190, 70%, 50%)',
+		Fries: 92,
+		FriesColor: 'hsl(210, 70%, 50%)',
+		'Ice cream': 10,
+		iceCreamColor: 'hsl(320, 70%, 50%)',
+	},
+];
+
+//Customers
+import { GridColDef } from '@mui/x-data-grid';
+export const customerColumns: GridColDef[] = [
+	{
+		field: 'id',
+		headerName: 'ID',
+		width: 90,
+	},
+	{
+		field: 'img',
+		headerName: 'Avatar',
+		width: 100,
+		renderCell: (params) => {
+			return (
+				<img
+					src={params.row.img || '/noavatar.png'}
+					alt=''
+					className='rounded-full w-10 h-10'
+				/>
+			);
+		},
+	},
+	{
+		field: 'firstName',
+		type: 'string',
+		headerName: 'First name',
+		width: 150,
+		editable: true,
+	},
+	{
+		field: 'lastName',
+		type: 'string',
+		headerName: 'Last name',
+		width: 150,
+		editable: true,
+	},
+	{
+		field: 'email',
+		type: 'string',
+		headerName: 'Email',
+		width: 200,
+		editable: true,
+	},
+	{
+		field: 'phone',
+		type: 'string',
+		headerName: 'Phone',
+		width: 200,
+		editable: true,
+	},
+
+	{
+		field: 'item',
+		headerName: 'Items',
+		width: 150,
+		type: 'string',
+		editable: true,
+	},
+	{
+		field: 'location',
+		headerName: 'Location',
+		width: 200,
+		renderCell: (params) => (
+			<div className='flex items-center'>
+				<MapPinIcon className='w-5 h-5 mr-2 text-gray-500' />
+				{params.row.location}
+			</div>
+		),
+		editable: true,
+	},
+	{
+		field: 'hireData',
+		headerName: 'Order date',
+		width: 200,
+		type: 'string',
+		editable: true,
+	},
+	{
+		field: 'status',
+		headerName: 'Status',
+		width: 200,
+		type: 'string',
+		renderCell: (params) => (
+			<div className={`flex items-center`}>
+				{params.row.status === 'Completed' ? (
+					<span className='text-green-500 text-4xl'>&#x2022;</span>
+				) : params.row.status === 'Pending' ? (
+					<span className='text-yellow-500 text-4xl'>&#x2022;</span>
+				) : params.row.status === 'Cancel' ? (
+					<span className='text-red-500 text-4xl'>&#x2022;</span>
+				) : null}
+				<span
+					className={`ml-2 text-xs ${
+						params.row.status === 'Completed'
+							? 'text-green-500'
+							: params.row.status === 'Pending'
+							? 'text-yellow-500'
+							: 'text-red-500'
+					}`}
+				>
+					{params.row.status}
+				</span>
+			</div>
+		),
+		editable: true,
+	},
+	{
+		field: 'actions',
+		headerName: 'Actions',
+		width: 120,
+		renderCell: () => (
+			<div className='flex items-center space-x-2'>
+				<PencilSquareIcon className='w-5 h-5 text-blue-500 cursor-pointer' />
+				<TrashIcon className='w-5 h-5 text-orange-500 cursor-pointer' />
+			</div>
+		),
+	},
+	{
+		field: 'verified',
+		headerName: 'Verified Account',
+		width: 150,
+		type: 'boolean',
+		renderCell: (params) => (
+			<div className='flex items-center'>
+				{params.row.verified ? (
+					<CheckCircleIcon className='w-5 h-5 text-green-500' />
+				) : (
+					<XCircleIcon className='w-5 h-5 text-red-500' />
+				)}
+			</div>
+		),
+	},
+];
+
+
+export const faqs = [
+	{
+		question: "What's the best thing about Switzerland?",
+		answer:
+			"I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+	},
+	{
+		question: 'Why did the scarecrow win an award?',
+		answer:
+			'Because he was outstanding in his field. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.',
+	},
+	{
+		question: 'How do you organize a space party?',
+		answer:
+			'You planet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.',
+	},
+	{
+		question: "What's orange and sounds like a parrot?",
+		answer:
+			'A carrot. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.',
+	},
+	{
+		question: "Why don't scientists trust atoms?",
+		answer:
+			'Because they make up everything. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.',
+	},
+	{
+		question:
+			"Did you hear about the mathematician who's afraid of negative numbers?",
+		answer:
+			"He'll stop at nothing to avoid them. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+	},
+	{
+		question: "Why don't skeletons fight each other?",
+		answer:
+			"They don't have the guts. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+	},
+	{
+		question: 'What do you call fake spaghetti?',
+		answer:
+			'An impasta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.',
+	},
+	{
+		question: 'How do you catch a squirrel?',
+		answer:
+			'Climb a tree and act like a nut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.',
+	},
+	{
+		question: 'Why did the coffee file a police report?',
+		answer:
+			'It got mugged. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.',
+	},
+]
+
+
+export const lineChartData = [
+	{
+		id: 'Japan',
+		color: 'hsl(344, 70%, 50%)',
+		data: [
+			{
+				x: 'Plane',
+				y: 67,
+			},
+			{
+				x: 'Helicopter',
+				y: 263,
+			},
+			{
+				x: 'Boat',
+				y: 26,
+			},
+			{
+				x: 'Train',
+				y: 259,
+			},
+			{
+				x: 'Subway',
+				y: 184,
+			},
+			{
+				x: 'Bus',
+				y: 298,
+			},
+			{
+				x: 'Car',
+				y: 148,
+			},
+			{
+				x: 'Moto',
+				y: 135,
+			},
+			{
+				x: 'Bicycle',
+				y: 23,
+			},
+			{
+				x: 'Horse',
+				y: 107,
+			},
+			{
+				x: 'Skateboard',
+				y: 3,
+			},
+			{
+				x: 'Others',
+				y: 47,
+			},
+		],
+	},
+	{
+		id: 'France',
+		color: 'hsl(168, 70%, 50%)',
+		data: [
+			{
+				x: 'Plane',
+				y: 215,
+			},
+			{
+				x: 'Helicopter',
+				y: 263,
+			},
+			{
+				x: 'Boat',
+				y: 243,
+			},
+			{
+				x: 'Train',
+				y: 244,
+			},
+			{
+				x: 'Subway',
+				y: 39,
+			},
+			{
+				x: 'Bus',
+				y: 248,
+			},
+			{
+				x: 'Car',
+				y: 210,
+			},
+			{
+				x: 'Moto',
+				y: 67,
+			},
+			{
+				x: 'Bicycle',
+				y: 45,
+			},
+			{
+				x: 'Horse',
+				y: 178,
+			},
+			{
+				x: 'Skateboard',
+				y: 247,
+			},
+			{
+				x: 'Others',
+				y: 105,
+			},
+		],
+	},
+	{
+		id: 'USA',
+		color: 'hsl(145, 70%, 50%)',
+		data: [
+			{
+				x: 'Plane',
+				y: 244,
+			},
+			{
+				x: 'Helicopter',
+				y: 111,
+			},
+			{
+				x: 'Boat',
+				y: 285,
+			},
+			{
+				x: 'Train',
+				y: 159,
+			},
+			{
+				x: 'Subway',
+				y: 145,
+			},
+			{
+				x: 'Bus',
+				y: 63,
+			},
+			{
+				x: 'Car',
+				y: 254,
+			},
+			{
+				x: 'Moto',
+				y: 32,
+			},
+			{
+				x: 'Bicycle',
+				y: 67,
+			},
+			{
+				x: 'Horse',
+				y: 34,
+			},
+			{
+				x: 'Skateboard',
+				y: 226,
+			},
+			{
+				x: 'Others',
+				y: 252,
+			},
+		],
+	},
+	{
+		id: 'Germany',
+		color: 'hsl(96, 70%, 50%)',
+		data: [
+			{
+				x: 'Plane',
+				y: 162,
+			},
+			{
+				x: 'Helicopter',
+				y: 199,
+			},
+			{
+				x: 'Boat',
+				y: 243,
+			},
+			{
+				x: 'Train',
+				y: 284,
+			},
+			{
+				x: 'Subway',
+				y: 287,
+			},
+			{
+				x: 'Bus',
+				y: 182,
+			},
+			{
+				x: 'Car',
+				y: 235,
+			},
+			{
+				x: 'Moto',
+				y: 216,
+			},
+			{
+				x: 'Bicycle',
+				y: 46,
+			},
+			{
+				x: 'Horse',
+				y: 199,
+			},
+			{
+				x: 'Skateboard',
+				y: 25,
+			},
+			{
+				x: 'Others',
+				y: 15,
+			},
+		],
+	},
+	{
+		id: 'Norway',
+		color: 'hsl(117, 70%, 50%)',
+		data: [
+			{
+				x: 'Plane',
+				y: 58,
+			},
+			{
+				x: 'Helicopter',
+				y: 199,
+			},
+			{
+				x: 'Boat',
+				y: 128,
+			},
+			{
+				x: 'Train',
+				y: 97,
+			},
+			{
+				x: 'Subway',
+				y: 146,
+			},
+			{
+				x: 'Bus',
+				y: 31,
+			},
+			{
+				x: 'Car',
+				y: 30,
+			},
+			{
+				x: 'Moto',
+				y: 113,
+			},
+			{
+				x: 'Bicycle',
+				y: 247,
+			},
+			{
+				x: 'Horse',
+				y: 295,
+			},
+			{
+				x: 'Skateboard',
+				y: 198,
+			},
+			{
+				x: 'Others',
+				y: 204,
+			},
+		],
+	},
+];
+
+export const pieChartData = [
+	{
+		id: 'Erlang',
+		label: 'Erlang',
+		value: 133,
+		color: 'hsl(339, 70%, 50%)',
+	},
+	{
+		id: 'Rust',
+		label: 'Rust',
+		value: 186,
+		color: 'hsl(166, 70%, 50%)',
+	},
+	{
+		id: 'Ruby',
+		label: 'Ruby',
+		value: 440,
+		color: 'hsl(293, 70%, 50%)',
+	},
+	{
+		id: 'Elixir',
+		label: 'Elixir',
+		value: 536,
+		color: 'hsl(212, 70%, 50%)',
+	},
+	{
+		id: 'Java',
+		label: 'Java',
+		value: 86,
+		color: 'hsl(256, 70%, 50%)',
 	},
 ];

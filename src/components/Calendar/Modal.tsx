@@ -2,21 +2,7 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 import ReactDOM from 'react-dom';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { Dispatch, SetStateAction } from 'react';
-
-interface ModalProps {
-	isOpen: boolean;
-	closeModal: () => void;
-	setMeetings: Dispatch<SetStateAction<Meeting[]>>;
-}
-
-interface Meeting {
-	id: string;
-	name: string;
-	title: string;
-	time: string;
-	date: string;
-}
+import { ModalProps } from '../../types/types';
 
 const Modal: React.FC<ModalProps> = ({ isOpen, closeModal, setMeetings }) => {
 	const modalRoot = document.getElementById('modal-root');

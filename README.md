@@ -8,7 +8,7 @@ https://admin-garski-dashboard.netlify.app/
 
 ## Screenshoot
 
-![App Screenshoot](https://github.com/margsoftbf/AdminDashboard/blob/main/public/assets/Screenshot.png)
+![App Screenshoot](https://margsoftbf.github.io/Portfolio/assets/AdminDashboard.webp)
 
 ## Download and Installation
 

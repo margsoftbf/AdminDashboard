@@ -9,10 +9,6 @@ const statuses: { [key: string]: string } = {
 	Overdue: 'text-red-700 bg-red-300 ring-red-600/20',
 };
 
-function classNames(...classes: string[]): string {
-	return classes.filter(Boolean).join(' ');
-}
-
 const HomeInvoices = () => {
 	return (
 		<div className='bg-lightGray rounded-md max-h-[530px] overflow-auto'>
@@ -51,10 +47,10 @@ const HomeInvoices = () => {
 											{({ active }) => (
 												<a
 													href='#'
-													className={classNames(
-														active ? 'bg-gray-50' : '',
-														'block px-3 py-1 text-sm leading-6 text-gray-900'
-													)}
+													className={`
+														${active ? 'bg-gray-50' : ''}
+														block px-3 py-1 text-sm leading-6 text-gray-900
+													`}
 												>
 													View<span className='sr-only'>, {client.name}</span>
 												</a>
@@ -64,10 +60,10 @@ const HomeInvoices = () => {
 											{({ active }) => (
 												<a
 													href='#'
-													className={classNames(
-														active ? 'bg-gray-50' : '',
-														'block px-3 py-1 text-sm leading-6 text-gray-900'
-													)}
+													className={`
+													${active ? 'bg-gray-50' : ''}
+														block px-3 py-1 text-sm leading-6 text-gray-900
+													`}
 												>
 													Edit<span className='sr-only'>, {client.name}</span>
 												</a>
@@ -93,10 +89,10 @@ const HomeInvoices = () => {
 										{client.lastInvoice.amount}
 									</div>
 									<div
-										className={classNames(
-											statuses[client.lastInvoice.status],
-											'rounded-md py-1 px-2 text-xs font-medium ring-1 ring-inset'
-										)}
+										className={`
+										${statuses[client.lastInvoice.status]}
+										rounded-md py-1 px-2 text-xs font-medium ring-1 ring-inset
+									  `}
 									>
 										{client.lastInvoice.status}
 									</div>

@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import Invoice from '../components/Invoice/InvoiceList';
 import InvoiceForm from '../components/Invoice/InvoiceForm';
 import { PlusSmallIcon } from '@heroicons/react/20/solid';
-import { invoices as invoicesData, InvoiceData } from '../data/data';
+import { invoices as invoicesData } from '../data/data';
 import { v4 as uuidv4 } from 'uuid';
+import { InvoiceData } from '../types/types';
 
 const Invoices: React.FC = () => {
 	const [modalOpen, setOpenModal] = useState(false);
@@ -14,7 +15,6 @@ const Invoices: React.FC = () => {
 	const [editedInvoice, setEditedInvoice] = useState<InvoiceData | undefined>(
 		undefined
 	);
-	console.log(invoices);
 	const handleSaveInvoice = (invoice: {
 		clientName: string;
 		emailAddress: string;

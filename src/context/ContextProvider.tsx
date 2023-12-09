@@ -1,14 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { AppContextProps } from '../types/types';
 
-interface AppContextProps {
-	isNotificationClicked: boolean;
-	toggleNotification: () => void;
-	isMessageClicked: boolean;
-	toggleMessage: () => void;
-	isCartClicked: boolean;
-	toggleCart: () => void;
-	handleCloseAll: () => void;
-}
 
 const AppContext = createContext<AppContextProps | undefined>(undefined);
 

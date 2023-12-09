@@ -9,10 +9,6 @@ const statuses: { [key: string]: string } = {
 	Archived: 'text-yellow-800 bg-yellow-200 ring-yellow-600/20',
 };
 
-function classNames(...classes: string[]) {
-	return classes.filter(Boolean).join(' ');
-}
-
 const HomeProjects = () => {
 	return (
 		<div className='bg-lightGray rounded-md max-h-[530px] overflow-y-auto overflow-hidden'>
@@ -29,10 +25,10 @@ const HomeProjects = () => {
 									{project.name}
 								</p>
 								<p
-									className={classNames(
-										statuses[project.status],
-										'rounded-md whitespace-nowrap mt-0.5 px-1.5 py-0.5 text-xs font-medium ring-1 ring-inset'
-									)}
+									className={`
+										${statuses[project.status]},
+										rounded-md whitespace-nowrap mt-0.5 px-1.5 py-0.5 text-xs font-medium ring-1 ring-inset
+									`}
 								>
 									{project.status}
 								</p>
@@ -71,10 +67,10 @@ const HomeProjects = () => {
 											{({ active }) => (
 												<a
 													href='#'
-													className={classNames(
-														active ? 'bg-gray-50' : '',
-														'block px-3 py-1 text-sm leading-6 text-gray-900'
-													)}
+													className={`${active ? 'bg-gray-50' : ''},
+													'block px-3 py-1 text-sm leading-6 text-gray-900' `
+														
+													}
 												>
 													Edit<span className='sr-only'>, {project.name}</span>
 												</a>
@@ -84,10 +80,9 @@ const HomeProjects = () => {
 											{({ active }) => (
 												<a
 													href='#'
-													className={classNames(
-														active ? 'bg-gray-50' : '',
+													className={`${active ? 'bg-gray-50' : ''},
 														'block px-3 py-1 text-sm leading-6 text-gray-900'
-													)}
+													`}
 												>
 													Move<span className='sr-only'>, {project.name}</span>
 												</a>
@@ -97,10 +92,9 @@ const HomeProjects = () => {
 											{({ active }) => (
 												<a
 													href='#'
-													className={classNames(
-														active ? 'bg-gray-50' : '',
+													className={`${active ? 'bg-gray-50' : ''},
 														'block px-3 py-1 text-sm leading-6 text-gray-900'
-													)}
+													`}
 												>
 													Delete
 													<span className='sr-only'>, {project.name}</span>

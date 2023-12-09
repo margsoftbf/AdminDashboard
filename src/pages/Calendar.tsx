@@ -20,18 +20,10 @@ import {
 import Modal from '../components/Calendar/Modal';
 import MeetingComponent from '../components/Calendar/Meeting';
 import { motion } from 'framer-motion';
+import { Meeting } from '../types/types';	
 
-interface Meeting {
-	id: string;
-	name: string;
-	title: string;
-	time: string;
-	date: string;
-}
 
-function classNames(...classes: (string | false)[]): string {
-	return classes.filter((c): c is string => typeof c === 'string').join(' ');
-}
+
 
 export default function Calendar() {
 	const [modalOpen, setOpenModal] = useState(false);
@@ -166,20 +158,22 @@ export default function Calendar() {
 							{days.map((day, dayIdx) => (
 								<div
 									key={day.toString()}
-									className={classNames(
-										dayIdx === 0 && colStartClasses[getDay(day)],
-										'py-4 md:py-6 lg:py-8 border border-gray-100 relative',
+									className={`
+									${dayIdx === 0 && colStartClasses[getDay(day)]}
+									py-4 md:py-6 lg:py-8 border border-gray-100 relative
+									${
 										!isEqual(day, selectedDay) &&
-											!isToday(day) &&
-											!isSameMonth(day, firstDayCurrentMonth) &&
-											'bg-stone-100'
-									)}
+										!isToday(day) &&
+										!isSameMonth(day, firstDayCurrentMonth) &&
+										'bg-stone-100'
+									}
+								  `}
 								>
 									<button
 										type='button'
 										onClick={() => setSelectedDay(day)}
-										className={classNames(
-											isEqual(day, selectedDay) && 'text-white',
+										className={`
+											${isEqual(day, selectedDay) && 'text-white',
 											!isEqual(day, selectedDay) &&
 												isToday(day) &&
 												'text-lightViolet',
@@ -200,9 +194,9 @@ export default function Calendar() {
 											!isEqual(day, selectedDay) &&
 												'hover:bg-stone-400 hover:text-white',
 											(isEqual(day, selectedDay) || isToday(day)) &&
-												'font-semibold',
-											'mx-auto flex h-8 w-8 items-center justify-center rounded-md'
-										)}
+												'font-semibold'}
+											mx-auto flex h-8 w-8 items-center justify-center rounded-md
+										`}
 									>
 										<time dateTime={format(day, 'yyyy-MM-dd')}>
 											{format(day, 'd')}

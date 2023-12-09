@@ -18,16 +18,14 @@ import {
 	ChevronDownIcon,
 	MagnifyingGlassIcon,
 } from '@heroicons/react/20/solid';
-
 import { MdDashboard } from 'react-icons/md';
-
 import { useLocation, Link } from 'react-router-dom';
 import { useAppContext } from '../../context/ContextProvider';
 import Notification from '../TopBar/Notification';
 import Message from '../TopBar/Message';
 import Cart from '../TopBar/Cart';
 import { navigation } from '../../data/data';
-
+import { SidebarProps } from '../../types/types';
 const userNavigation = [
 	{ name: 'Profile', href: '/', icon: <UserCircleIcon /> },
 	{ name: 'Message', href: '/', icon: <EnvelopeIcon /> },
@@ -37,15 +35,6 @@ const userNavigation = [
 	{ name: 'Settings', href: '/', icon: <Cog8ToothIcon /> },
 	{ name: 'Sign out', href: '/', icon: <ArrowLeftOnRectangleIcon /> },
 ];
-
-interface SidebarProps {
-	classes: any[];
-	renderRoutes: () => React.ReactNode;
-}
-
-function classNames(...classes: (string | undefined | null | false)[]) {
-	return classes.filter(Boolean).join(' ');
-}
 
 const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 	const location = useLocation();
@@ -128,12 +117,14 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 														<li key={item.name}>
 															<Link
 																to={item.href}
-																className={classNames(
-																	location.pathname === item.href
-																		? 'bg-lightViolet text-white'
-																		: 'text-gray-400 hover:text-white hover:bg-darkViolet',
+																className={`
+																	${
+																		location.pathname === item.href
+																			? 'bg-lightViolet text-white'
+																			: 'text-gray-400 hover:text-white hover:bg-darkViolet'
+																	},
 																	'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
-																)}
+																`}
 																onClick={() => setSidebarOpen(false)}
 															>
 																<item.icon
@@ -169,12 +160,14 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 										<li key={item.name}>
 											<Link
 												to={item.href}
-												className={classNames(
+												className={`
+												${
 													location.pathname === item.href
 														? 'bg-lightViolet text-white'
-														: 'text-gray-400 hover:text-white hover:bg-darkViolet',
-													'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
-												)}
+														: 'text-gray-400 hover:text-white hover:bg-darkViolet'
+												}
+												group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold
+											  `}
 												onClick={handleCloseAll}
 											>
 												<item.icon
@@ -322,10 +315,10 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 															</span>
 															<a
 																href={item.href}
-																className={classNames(
-																	active ? 'bg-gray-100 rounded-md' : '',
+																className={`
+																	${active ? 'bg-gray-100 rounded-md' : ''},
 																	'block px-1 py-1 text-sm leading-6 text-gray-900'
-																)}
+																`}
 															>
 																{item.name}
 															</a>

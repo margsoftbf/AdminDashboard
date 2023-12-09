@@ -2,23 +2,7 @@ import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { EllipsisVerticalIcon } from '@heroicons/react/24/outline';
 import { format, parseISO } from 'date-fns';
-
-export interface Meeting {
-	id: string;
-	name: string;
-	title: string;
-	time: string;
-	date: string;
-}
-
-interface MeetingProps {
-	meeting: Meeting;
-	onDelete: (id: string) => void;
-}
-
-function classNames(...classes: (string | false)[]): string {
-	return classes.filter((c): c is string => typeof c === 'string').join(' ');
-}
+import { MeetingProps } from '../../types/types';
 
 const Meeting: React.FC<MeetingProps> = ({ meeting, onDelete }) => {
 	let date = parseISO(meeting.date);
@@ -69,10 +53,11 @@ const Meeting: React.FC<MeetingProps> = ({ meeting, onDelete }) => {
 									<a
 										onClick={() => onDelete(meeting.id)}
 										href='#'
-										className={classNames(
-											active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-											'block px-4 py-2 text-sm'
-										)}
+										className={`
+										${
+											active ? 'bg-gray-100 text-gray-900' : 'text-gray-700'
+										} block px-4 py-2 text-sm'}
+										`}
 									>
 										Cancel
 									</a>

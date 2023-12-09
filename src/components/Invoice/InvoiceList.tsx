@@ -1,22 +1,7 @@
 import React from 'react';
+import { InvoiceListProps } from '../../types/types';
 
-interface InvoiceProps {
-	invoice: {
-		id: string;
-		clientName: string;
-		emailAddress: string;
-		streetAddress: string;
-		city: string;
-		state: string;
-		zipCode: number;
-		amount: number;
-		status: string;
-	};
-	onEdit: (id: string) => void;
-	onDelete: (id: string) => void;
-}
-
-const Invoice: React.FC<InvoiceProps> = ({ invoice, onEdit, onDelete }) => {
+const Invoice: React.FC<InvoiceListProps> = ({ invoice, onEdit, onDelete }) => {
 	return (
 		<div className='bg-lightGray rounded-md p-4 mb-4 flex flex-col sm:flex-row sm:justify-around'>
 			<div className='flex justify-between items-center sm:justify-start sm:w-full sm:gap-4'>

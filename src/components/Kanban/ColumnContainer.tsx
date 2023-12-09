@@ -1,20 +1,11 @@
 import { TrashIcon, PlusCircleIcon } from '@heroicons/react/24/outline';
-import { Column, Id, Task } from '../../data/data';
 import { SortableContext, useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import { useMemo, useState } from 'react';
 import TaskCard from './TaskCard';
+import { KanbanContainerProps } from '../../types/types';
 
-interface Props {
-	column: Column;
-	deleteColumn: (id: Id) => void;
-	updateColumn: (id: Id, title: string) => void;
-	createTask: (columnId: Id) => void;
-	updateTask: (id: Id, content: string) => void;
-	deleteTask: (id: Id) => void;
-	tasks: Task[];
-}
-const ColumnContainer = (props: Props) => {
+const ColumnContainer = (props: KanbanContainerProps) => {
 	const {
 		column,
 		deleteColumn,

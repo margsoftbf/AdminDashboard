@@ -1,98 +1,6 @@
 import { ResponsiveBar } from '@nivo/bar';
 import { motion } from 'framer-motion';
-
-const data = [
-	{
-		country: 'Poland',
-		pizza: 120,
-		pizzaColor: 'hsl(180, 70%, 50%)',
-		pasta: 25,
-		pastaColor: 'hsl(90, 70%, 50%)',
-		burger: 150,
-		burgerColor: 'hsl(45, 70%, 50%)',
-		Sushi: 80,
-		SushiColor: 'hsl(270, 70%, 50%)',
-		Fries: 90,
-		FriesColor: 'hsl(120, 70%, 50%)',
-		'Ice cream': 200,
-		iceCreamColor: 'hsl(300, 70%, 50%)',
-	},
-	{
-		country: 'Italy',
-		pizza: 15,
-		pizzaColor: 'hsl(200, 70%, 50%)',
-		pasta: 100,
-		pastaColor: 'hsl(150, 70%, 50%)',
-		burger: 120,
-		burgerColor: 'hsl(270, 70%, 50%)',
-		Sushi: 20,
-		SushiColor: 'hsl(300, 70%, 50%)',
-		Fries: 130,
-		FriesColor: 'hsl(200, 70%, 50%)',
-		'Ice cream': 70,
-		iceCreamColor: 'hsl(320, 70%, 50%)',
-	},
-	{
-		country: 'Japan',
-		pizza: 30,
-		pizzaColor: 'hsl(250, 70%, 50%)',
-		pasta: 5,
-		pastaColor: 'hsl(60, 70%, 50%)',
-		burger: 90,
-		burgerColor: 'hsl(150, 70%, 50%)',
-		Sushi: 120,
-		SushiColor: 'hsl(190, 70%, 50%)',
-		Fries: 80,
-		FriesColor: 'hsl(220, 70%, 50%)',
-		'Ice cream': 50,
-		iceCreamColor: 'hsl(340, 70%, 50%)',
-	},
-	{
-		country: 'USA',
-		pizza: 150,
-		pizzaColor: 'hsl(160, 70%, 50%)',
-		pasta: 20,
-		pastaColor: 'hsl(80, 70%, 50%)',
-		burger: 30,
-		burgerColor: 'hsl(30, 70%, 50%)',
-		Sushi: 70,
-		SushiColor: 'hsl(340, 70%, 50%)',
-		Fries: 100,
-		FriesColor: 'hsl(130, 70%, 50%)',
-		'Ice cream': 20,
-		iceCreamColor: 'hsl(160, 70%, 50%)',
-	},
-	{
-		country: 'France',
-		pizza: 25,
-		pizzaColor: 'hsl(190, 70%, 50%)',
-		pasta: 30,
-		pastaColor: 'hsl(240, 70%, 50%)',
-		burger: 160,
-		burgerColor: 'hsl(260, 70%, 50%)',
-		Sushi: 50,
-		SushiColor: 'hsl(180, 70%, 50%)',
-		Fries: 160,
-		FriesColor: 'hsl(210, 70%, 50%)',
-		'Ice cream': 10,
-		iceCreamColor: 'hsl(320, 70%, 50%)',
-	},
-	{
-		country: 'Greece',
-		pizza: 130,
-		pizzaColor: 'hsl(80, 70%, 50%)',
-		pasta: 120,
-		pastaColor: 'hsl(240, 70%, 50%)',
-		burger: 180,
-		burgerColor: 'hsl(160, 70%, 50%)',
-		Sushi: 130,
-		SushiColor: 'hsl(190, 70%, 50%)',
-		Fries: 92,
-		FriesColor: 'hsl(210, 70%, 50%)',
-		'Ice cream': 10,
-		iceCreamColor: 'hsl(320, 70%, 50%)',
-	},
-];
+import { BarChartData } from '../data/data';
 
 const BarChart = () => {
 	return (
@@ -106,7 +14,7 @@ const BarChart = () => {
 				Bar Chart
 			</h2>
 			<ResponsiveBar
-				data={data}
+				data={BarChartData}
 				keys={['pizza', 'pasta', 'burger', 'Sushi', 'Fries', 'Ice cream']}
 				indexBy='country'
 				margin={{ top: 50, right: 130, bottom: 80, left: 60 }}

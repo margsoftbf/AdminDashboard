@@ -1,13 +1,8 @@
 import { useEffect, useState } from 'react';
 import { personsData } from '../../data/data';
+import { NotificationProps } from '../../types/types';
 
-interface SidebarProps {
-	checkedCount: number;
-	setCheckedCount: React.Dispatch<React.SetStateAction<number>>;
-	setUnread: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const Notification: React.FC<SidebarProps> = ({
+const Notification: React.FC<NotificationProps> = ({
 	checkedCount,
 	setCheckedCount,
 	setUnread,

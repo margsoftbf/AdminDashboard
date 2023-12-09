@@ -22,7 +22,6 @@ function App() {
 	return (
 		<Router>
 			<Sidebar
-				classes={[]}
 				renderRoutes={() => (
 					<Suspense fallback={<div>Loading...</div>}>
 						<Routes>

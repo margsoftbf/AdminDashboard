@@ -1,33 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-interface InvoiceFormProps {
-	onSave: (invoice: {
-		clientName: string;
-		emailAddress: string;
-		streetAddress: string;
-		city: string;
-		state: string;
-		zipCode: number;
-		amount: number;
-		status: string;
-	}) => void;
-	editedInvoice?:
-		| {
-				id: string;
-				clientName: string;
-				emailAddress: string;
-				streetAddress: string;
-				city: string;
-				state: string;
-				zipCode: number;
-				amount: number;
-				status: string;
-		  }
-		| undefined;
-	onClearEdit: () => void;
-	isOpen: boolean;
-	closeModal: () => void;
-}
+import {InvoiceFormProps} from '../../types/types';
 
 const InvoiceForm: React.FC<InvoiceFormProps> = ({
 	onSave,

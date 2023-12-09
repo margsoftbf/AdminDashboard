@@ -1,38 +1,7 @@
 import { ResponsivePie } from '@nivo/pie';
 import { motion } from 'framer-motion';
+import { pieChartData } from '../data/data';
 
-const data = [
-	{
-		id: 'Erlang',
-		label: 'Erlang',
-		value: 133,
-		color: 'hsl(339, 70%, 50%)',
-	},
-	{
-		id: 'Rust',
-		label: 'Rust',
-		value: 186,
-		color: 'hsl(166, 70%, 50%)',
-	},
-	{
-		id: 'Ruby',
-		label: 'Ruby',
-		value: 440,
-		color: 'hsl(293, 70%, 50%)',
-	},
-	{
-		id: 'Elixir',
-		label: 'Elixir',
-		value: 536,
-		color: 'hsl(212, 70%, 50%)',
-	},
-	{
-		id: 'Java',
-		label: 'Java',
-		value: 86,
-		color: 'hsl(256, 70%, 50%)',
-	},
-];
 const PieChart = () => {
 	return (
 		<motion.div
@@ -45,7 +14,7 @@ const PieChart = () => {
 				Pie Chart
 			</h2>
 			<ResponsivePie
-				data={data}
+				data={pieChartData}
 				theme={{
 					axis: {
 						domain: {
