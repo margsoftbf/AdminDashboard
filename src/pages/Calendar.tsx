@@ -20,10 +20,7 @@ import {
 import Modal from '../components/Calendar/Modal';
 import MeetingComponent from '../components/Calendar/Meeting';
 import { motion } from 'framer-motion';
-import { Meeting } from '../types/types';	
-
-
-
+import { Meeting } from '../types/types';
 
 export default function Calendar() {
 	const [modalOpen, setOpenModal] = useState(false);
@@ -173,30 +170,27 @@ export default function Calendar() {
 										type='button'
 										onClick={() => setSelectedDay(day)}
 										className={`
-											${isEqual(day, selectedDay) && 'text-white',
-											!isEqual(day, selectedDay) &&
-												isToday(day) &&
-												'text-lightViolet',
-											!isEqual(day, selectedDay) &&
-												!isToday(day) &&
-												isSameMonth(day, firstDayCurrentMonth) &&
-												'text-gray-900',
-											!isEqual(day, selectedDay) &&
-												!isToday(day) &&
-												!isSameMonth(day, firstDayCurrentMonth) &&
-												'text-gray-400',
-											isEqual(day, selectedDay) &&
-												isToday(day) &&
-												'bg-lightViolet',
-											isEqual(day, selectedDay) &&
-												!isToday(day) &&
-												'bg-stone-700',
-											!isEqual(day, selectedDay) &&
-												'hover:bg-stone-400 hover:text-white',
-											(isEqual(day, selectedDay) || isToday(day)) &&
-												'font-semibold'}
-											mx-auto flex h-8 w-8 items-center justify-center rounded-md
-										`}
+  mx-auto flex h-8 w-8 items-center justify-center rounded-md
+  ${isEqual(day, selectedDay) && 'font-semibold text-white '}
+  ${
+		isToday(day)
+			? 'bg-lightViolet text-white'
+			: isEqual(day, selectedDay)
+			? 'bg-stone-700'
+			: ''
+	}
+  ${
+		!isEqual(day, selectedDay) && isSameMonth(day, firstDayCurrentMonth)
+			? 'text-gray-900'
+			: ''
+	}
+  ${
+		!isEqual(day, selectedDay) && !isSameMonth(day, firstDayCurrentMonth)
+			? 'text-gray-400'
+			: ''
+	}
+  ${!isEqual(day, selectedDay) ? 'hover:bg-stone-400 hover:text-white' : ''}
+`}
 									>
 										<time dateTime={format(day, 'yyyy-MM-dd')}>
 											{format(day, 'd')}
