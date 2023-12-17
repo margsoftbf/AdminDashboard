@@ -4,7 +4,7 @@ Welcome to my dashboard application, a comprehensive solution designed to stream
 
 ## Live preview:
 
-https://admin-garski-dashboard.netlify.app/
+https://admin-dashboard-gary.vercel.app/
 
 ## Screenshoot
 

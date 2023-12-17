@@ -53,7 +53,7 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 			<Transition.Root show={sidebarOpen} as={Fragment}>
 				<Dialog
 					as='div'
-					className='relative z-50 lg:hidden'
+					className='relative z-50 lg:hidden  '
 					onClose={setSidebarOpen}
 				>
 					<Transition.Child
@@ -65,10 +65,10 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 						leaveFrom='opacity-100'
 						leaveTo='opacity-0'
 					>
-						<div className='fixed inset-0 bg-lightGray/70' />
+						<div className='fixed inset-0 bg-lightGray/90' />
 					</Transition.Child>
 
-					<div className='fixed inset-0 flex'>
+					<div className='fixed inset-0 flex '>
 						<Transition.Child
 							as={Fragment}
 							enter='transition ease-in-out duration-300 transform'
@@ -78,7 +78,7 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 							leaveFrom='translate-x-0'
 							leaveTo='-translate-x-full'
 						>
-							<Dialog.Panel className='relative mr-16 flex w-full max-w-xs flex-1'>
+							<Dialog.Panel className='relative mr-16 flex w-full max-w-xs flex-1 '>
 								<Transition.Child
 									as={Fragment}
 									enter='ease-in-out duration-300'
@@ -88,7 +88,7 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 									leaveFrom='opacity-100'
 									leaveTo='opacity-0'
 								>
-									<div className='absolute left-full top-0 flex w-16 justify-center pt-5'>
+									<div className='absolute left-full top-0 flex w-16 justify-center pt-5 '>
 										<button
 											type='button'
 											className='-m-2.5 p-2.5'
@@ -102,7 +102,7 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 										</button>
 									</div>
 								</Transition.Child>
-								<div className='flex grow flex-col gap-y-5 overflow-y-auto bg-lightGray px-6 pb-4 ring-1 ring-white/10'>
+								<div className='flex grow flex-col gap-y-5 overflow-y-auto bg-lightGray px-6 pb-4 ring-1 ring-white/10 '>
 									<div className='flex h-16 shrink-0 items-center'>
 										<MdDashboard className='text-lightViolet text-3xl' />
 										<span className='text-white ml-2 font-semibold'>
@@ -186,7 +186,7 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 			</div>
 
 			<div className='lg:pl-72'>
-				<div className='sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-lightGray bg-lightGray px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8'>
+				<div className='sticky top-0 z-40 flex h-16 shrink-0 items-center justify-between border-b border-lightGray bg-lightGray px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8'>
 					<button
 						type='button'
 						className='-m-2.5 p-2.5 text-white lg:hidden'
@@ -196,29 +196,28 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 						<Bars3Icon className='h-6 w-6' aria-hidden='true' />
 					</button>
 
-					<div
-						className='h-6 w-px bg-gray-900/10 lg:hidden'
-						aria-hidden='true'
-					/>
-
-					<div className='flex flex-1 gap-x-4 self-stretch lg:gap-x-6'>
-						<form className='relative flex flex-1' action='#' method='GET'>
+					<div className='flex w-full items-center justify-end gap-x-4 self-stretch lg:gap-x-6'>
+						<form
+							className='hidden relative md:flex items-center h-full flex-1'
+							action='#'
+							method='GET'
+						>
 							<label htmlFor='search-field' className='sr-only'>
 								Search
 							</label>
 							<MagnifyingGlassIcon
-								className='pointer-events-none absolute inset-y-0 left-0 h-full w-5 bg-lightGray text-gray-400'
+								className='pointer-events-none absolute inset-y-0 left-0 my-auto h-5 w-5 ml-3 text-gray-400'
 								aria-hidden='true'
 							/>
 							<input
 								id='search-field'
-								className='block h-full w-full border-0 py-0 pl-8 pr-0 bg-lightGray text-white placeholder:text-gray-400 focus:ring-0 sm:text-sm'
+								className=' w-44 h-10 pl-10 pr-3 py-2 border-2 border-borderGray rounded-md bg-[#0F0F12] text-white placeholder:text-gray-400 sm:text-sm outline-none  focus:border-none focus:ring-1 focus:ring-lightViolet'
 								placeholder='Search...'
 								type='search'
 								name='search'
 							/>
 						</form>
-						<div className='flex items-center gap-x-4'>
+						<div className='flex items-center justify-center gap-x-4'>
 							<div className='flex items-center relative'>
 								<button
 									type='button'
@@ -243,7 +242,7 @@ const Sidebar: React.FC<SidebarProps> = ({ renderRoutes }) => {
 							</div>
 							<div className='flex items-center relative'>
 								{unread ? null : (
-									<span className='absolute inline-block w-2 h-2 rounded-full bg-red-400 -right-[1px] top-0'></span>
+									<span className='absolute inline-block w-2 h-2 rounded-full bg-myPink -right-[1px] top-0'></span>
 								)}
 								<button
 									type='button'

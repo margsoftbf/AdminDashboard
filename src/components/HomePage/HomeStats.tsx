@@ -13,13 +13,13 @@ const HomeStats = () => {
 				{stats.map((item) => (
 					<div
 						key={item.id}
-						className='px-4 py-5 sm:p-6 bg-lightGray rounded-md border border-lightViolet'
+						className='px-4 py-5 sm:p-6 bg-lightGray rounded-md border border-borderGray'
 					>
 						<div className='text-base font-normal text-gray-100'>
 							{item.name}
 						</div>
 						<div className='mt-1 flex flex- items-baseline justify-between'>
-							<div className='flex items-baseline text-2xl font-semibold text-indigo-600 font-sans'>
+							<div className='flex items-baseline text-2xl font-semibold text-darkViolet font-sans'>
 								{item.stat}
 								<span className='ml-2 text-sm font-medium text-gray-500'>
 									from {item.previousStat}

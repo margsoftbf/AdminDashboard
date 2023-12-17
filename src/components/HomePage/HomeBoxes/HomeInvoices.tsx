@@ -11,7 +11,7 @@ const statuses: { [key: string]: string } = {
 
 const HomeInvoices = () => {
 	return (
-		<div className='bg-lightGray rounded-md max-h-[530px] overflow-auto'>
+		<div className='bg-lightGray border border-borderGray rounded-md max-h-[530px] overflow-auto'>
 			<h2 className='font-semibold mt-2 ml-2 text-xl text-white'>Invoices</h2>
 			<ul
 				role='list'

@@ -46,7 +46,7 @@ const Notification: React.FC<NotificationProps> = ({
 					}`}
 				>
 					{person.checked ? null : (
-						<span className='absolute inline-block w-2 h-2 rounded-full bg-red-400 right-1 top-1'></span>
+						<span className='absolute inline-block w-2 h-2 rounded-full bg-myPink right-1 top-1'></span>
 					)}
 					<div className='w-0 flex-1 p-1'>
 						<div className='flex items-start'>

@@ -228,30 +228,6 @@ export const personsData: Person[] = [
 export const products = [
 	{
 		id: 1,
-		name: 'Throwback Hip Bag',
-		href: '#',
-		color: 'Salmon',
-		price: '$90.00',
-		quantity: 1,
-		imageSrc:
-			'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
-		imageAlt:
-			'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
-	},
-	{
-		id: 2,
-		name: 'Medium Stuff Satchel',
-		href: '#',
-		color: 'Blue',
-		price: '$32.00',
-		quantity: 1,
-		imageSrc:
-			'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
-		imageAlt:
-			'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
-	},
-	{
-		id: 3,
 		name: 'Women pants',
 		href: '#',
 		color: 'Pink',
@@ -262,7 +238,7 @@ export const products = [
 		imageAlt: 'Women pink pants',
 	},
 	{
-		id: 4,
+		id: 2,
 		name: 'Women tshirt',
 		href: '#',
 		color: 'Gray',
@@ -273,7 +249,7 @@ export const products = [
 		imageAlt: 'Women tshirt gray',
 	},
 	{
-		id: 5,
+		id: 3,
 		name: 'Men suit',
 		href: '#',
 		color: 'Green',

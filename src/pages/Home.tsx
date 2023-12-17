@@ -5,7 +5,7 @@ import PersonsScore from '../components/HomePage/PersonsScore';
 
 const Home = () => {
 	return (
-		<div>
+		<div className=''>
 			<PersonsScore />
 			<HomeCharts />
 			<HomeStats />

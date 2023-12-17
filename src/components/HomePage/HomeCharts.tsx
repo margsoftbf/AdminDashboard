@@ -10,13 +10,13 @@ const HomeCharts = () => {
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
 		>
-			<div className='w-full h-96 lg:w-2/3 bg-lightGray rounded-md '>
+			<div className='w-full h-96 lg:w-2/3 bg-lightGray border border-borderGray rounded-md '>
 				<h2 className='text-left ml-2 mt-2 font-semibold text-white'>
 					Line Chart
 				</h2>
 				<ResponsiveLine
 					data={salesData}
-					colors={['#763b25', '#2bde3c']}
+					colors={['#FC8D9D', '#2bde3c']}
 					theme={{
 						axis: {
 							domain: {
@@ -100,7 +100,7 @@ const HomeCharts = () => {
 					]}
 				/>
 			</div>
-			<div className='w-full h-96 lg:w-1/3 bg-lightGray rounded-md'>
+			<div className='w-full h-96 lg:w-1/3 bg-lightGray border border-borderGray rounded-md'>
 				<h2 className='text-left ml-2 mt-2 font-semibold text-white'>
 					Circle Chart
 				</h2>

@@ -1,7 +1,7 @@
 import { personsData } from '../../../data/data';
 const HomeTeam = () => {
 	return (
-		<div className='bg-lightGray rounded-md max-h-[530px] overflow-auto'>
+		<div className='bg-lightGray border border-borderGray rounded-md max-h-[530px] overflow-auto'>
 			<h2 className='ml-2 font-semibold mt-2 text-xl text-white'>Team</h2>
 			<ul role='list' className='divide-y bg-lightGray px-2'>
 				{personsData.map((person) => (

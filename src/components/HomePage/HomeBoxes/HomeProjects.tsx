@@ -11,7 +11,7 @@ const statuses: { [key: string]: string } = {
 
 const HomeProjects = () => {
 	return (
-		<div className='bg-lightGray rounded-md max-h-[530px] overflow-y-auto overflow-hidden'>
+		<div className='bg-lightGray border border-borderGray rounded-md max-h-[530px] overflow-y-auto overflow-hidden'>
 			<h2 className='ml-2 font-semibold mt-2 text-xl text-white'>Projects</h2>
 			<ul role='list' className='divide-y divide-gray-100 px-2'>
 				{projects.map((project) => (
@@ -68,9 +68,7 @@ const HomeProjects = () => {
 												<a
 													href='#'
 													className={`${active ? 'bg-gray-50' : ''},
-													'block px-3 py-1 text-sm leading-6 text-gray-900' `
-														
-													}
+													'block px-3 py-1 text-sm leading-6 text-gray-900' `}
 												>
 													Edit<span className='sr-only'>, {project.name}</span>
 												</a>

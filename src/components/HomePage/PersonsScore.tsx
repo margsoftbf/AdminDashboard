@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 const PersonsScore = () => {
 	return (
 		<motion.div
-			className='border-b border-b-gray-900/10 lg:border-t lg:border-t-gray-900/5 my-2'
+			className='my-2'
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 1, ease: [0.6, -0.05, 0.01, 0.99] }}
@@ -17,7 +17,7 @@ const PersonsScore = () => {
 				{persons.map((person) => (
 					<div
 						key={person.id}
-						className='flex flex-row items-center justify-between bg-lightGray rounded-lg gap-y-2 gap-x-1 border-t border-gray-900/5 px-1 py-1 md:px-2 md:py-2'
+						className='flex flex-row items-center justify-between bg-lightGray rounded-lg gap-y-2 gap-x-1 border border-borderGray px-1 py-1 md:px-2 md:py-2'
 					>
 						<div className='w-3/5 h-full flex flex-col items-start p-2'>
 							<div className='flex items-center'>
